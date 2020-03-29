@@ -1,0 +1,47 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
+style(type='text/css').
+
+
+	.btn-wrap {
+		display: flex;
+		flex-wrap: wrap;
+		flex-flow: column;
+		align-items: baseline;
+	}
+
+
++header()
+.content
+	.main-cont
+		p Чтобы вызвать нужное окно добавь на элемент класс .modal-get и data-modal="имя окна"
+		p Чтобы добавить метод закрытия окна по клику на элемент добавиь класс .modal-send
+		.btn-wrap
+			.btn--md.btn--mark.modal-get(data-modal="registration") Регистрация | data-modal="registration"
+			br
+			.btn--md.btn--mark.modal-get(data-modal="enter") Регистрация | data-modal="enter"
+			br
+			.btn--md.btn--mark.modal-get(data-modal="town") Выберите город | data-modal="town"
+			br
+			.btn--md.btn--mark.modal-get(data-modal="pass") Восстановление пароля | data-modal="pass"
+			br
+			.btn--md.btn--mark.modal-get(data-modal="ingr") Добавить ингридиент | data-modal="ingr"
+			br
+			.btn--md.btn--mark.modal-get(data-modal="TY") Заказ принят | data-modal="TY"
+			br
+			.btn--md.btn--mark.modal-get(data-modal="location") Выбор города | data-modal="location"
+			br
+			.btn--md.btn--mark.modal-get(data-modal="deliver") Выбор типа доставки | data-modal="deliver"
+			br
+			.btn--md.btn--mark.modal-get(data-modal="disposal") Выбор адреса | data-modal="disposal"
+			br
+			.btn--md.btn--mark.modal-get(data-modal="unworked") Ресторан не работает | data-modal="unworked"
+			br
+			.btn--md.btn--mark.modal-get(data-modal="profile") Редактировать профиль | data-modal="profile"
+			br
+			.btn--md.btn--mark.modal-get(data-modal="address") Редактировать Адрес | data-modal="address"
++footer()
++modal()
+
+include ./block_html/_script.pug

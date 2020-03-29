@@ -1,0 +1,20 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
++header(page ="header--main-page")
+
+.content
+	.main-cont
+		.section-title-row
+			.section-title Пицца
+			.promo
+				input(type="text" placeholder="Ваш промокод").promo-input
+				.btn--md.btn--mark.promo-get Применить
+		.product-cont
+			- for (var i=0;i< 7;i++)
+				+product()
+
+
++footer()
+include ./block_html/_script.pug
+

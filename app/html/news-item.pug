@@ -1,0 +1,23 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
+.page
+	+header()
+	.content
+		.main-cont
+			.news-full
+				.news-full__img(style="background-image:url('img/sets.jpg')")
+				.news-full__cont.text
+					h1 Открылся новый ресторан
+					p В день вашего рождения дарим Пиццу-пирог 25 см!
+					h2 Ждем Вас на открытие
+					p Акция действует по промокоду D120 один раз в день только на доставку и самовывоз при достижении минимальной суммы заказа, в течение 14 дней: три дня до, в день рождения и десять дней после него. Укажите день вашего рождения в Личном кабинете.
+					ul
+						li вкусная пицца
+						li Гочая лапша
+						li Новый соус
+						li Готовые закуски
+					p Будьте внимательны, далее изменение даты дня рождения невозможно.
+					a(href="#").btn--md.btn--light.btn--mobile К списку новостей
+	+footer()
+include ./block_html/_script.pug

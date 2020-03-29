@@ -1,0 +1,17 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
+.page
+	+header()
+	.content
+		.main-cont
+			h1 Акции
+			.card-list
+				- for (var i=0;i<8;i++)
+				.card-list__el
+					.card-list__img(style="background-image:url('img/sets.jpg')")
+					.card-list__info
+						.card-list__title Открытие нового ресторана
+						.card-list__decr Две оригинальные пиццы 30 см – Четыре Сезона и Гавайская + пара бутылочек Кока-Кола 0,5 л. Самое додоброе и бодрящее сочетание! Выберите комбо в меню
+	+footer()
+include ./block_html/_script.pug

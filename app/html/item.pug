@@ -1,0 +1,51 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
++header(page ="header--main-page")
+.content
+	.main-cont
+		.card
+			.card-img
+				.card-img__el(style="background-image:url('img/pizza.jpg')")
+			.card-info
+				.card__title
+					.title-row-back
+						+icon("round-arrow-left","icon")
+					span Рокки Роутс
+				.card-descr Сыр, пицца-соус, ананас, сыр, перец болгарский, куриное филе
+					span.product__add.tooltip
+						+icon("plus","icon")
+						.top
+							i
+							| добавить ингредиенты
+				.item-content
+					.size
+						.size__el.size__el--active 25 см
+						.size__el 30 см
+						.size__el 35 см
+					.duff
+						.duff__el.duff__el--active Традиционное
+						.duff__el Тонкое
+
+					.product-footer
+						.product-price 860 р.
+						.product-add.toggle-cart-animate В корзину
+						.product-incr
+							+incr()
+//card-end
+.sale-wrap
+	.main-cont
+		.sale
+			.sale-slider-wrap
+				.sale-slider
+					.sale-slider__el(style="background-image:url('img/sale.jpg')")
+					.sale-slider__el(style="background-image:url('img/sale.jpg')")
+					.sale-slider__el(style="background-image:url('img/sale.jpg')")
+			.sale-info
+				.sale-title АКЦИИ
+				.sale-text Постоянно проходящие акции в Trattoria сделают покупку еще более привлекательной и выгодной. Вы можете воспользоваться промокодом указанным в действующих акциях на сайте, нашем приложении или соцсетях
+
++footer()
+//+mobile-menu()
+
+include ./block_html/_script.pug

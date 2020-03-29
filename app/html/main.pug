@@ -1,0 +1,130 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
++header()
+
+.main-slider
+	- for (var i=0;i<4;i++)
+		a(href="#").main-slider__el-wrap
+			.main-slider__el(style="background-image:url('img/banner-1.jpg')")
+
+.content
+	.main-cont
+		//.consist
+		.consist
+			.consist__el
+				.consist__el-icon
+					+icon("veg","icon")
+				.consist__el-text Свежие натуральные ингредиенты
+			.consist__el
+				.consist__el-icon
+					+icon("pizza","icon")
+				.consist__el-text Нежное тесто из лучших сортов муки
+			.consist__el
+				.consist__el-icon
+					+icon("knife","icon")
+				.consist__el-text Польза в каждом кусочке
+
+	//promo
+	.promo-wrap
+		.promo
+			input(type="text" placeholder="Ваш промокод").promo-input
+			.btn--md.btn--mark.promo-get Применить
+
+	//product-cont
+	.main-cont
+		.product-cont
+			- for (var i=0;i< 3;i++)
+				.product-el
+					.product-label пицца дня
+					a(href="#").product__img
+						.product__img-el(style="background-image:url('img/item-pizza-1.png')")
+					.product__cont
+						a(href="#").product__title Рокки Роутс
+						.product__text Сыр, пицца-соус, ананас, сыр, перец болгарский, куриное филе, пицца-соус, ананас
+							span.product__add.tooltip
+									+icon("plus","icon")
+									.top
+										i
+										| добавить ингредиенты
+						.size
+							.size__el.size__el--active 25 см
+							.size__el 30 см
+							.size__el 35 см
+						.duff
+							.duff__el.duff__el--active Традиционное
+							.duff__el Тонкое
+						.product-footer
+							.product-price 860 р.
+							.product-add.toggle-cart-animate В корзину
+							.product-incr
+								+incr()
+				.product-el
+					.product-label.product-label--red хит продаж
+					a(href="#").product__img
+						.product__img-el(style="background-image:url('img/item-pizza-1.png')")
+					.product__cont
+						a(href="#").product__title Рокки Роутс
+						.product__text Сыр, пицца-соус, ананас, сыр, перец болгарский, куриное филе, пицца-соус, ананас
+						.size
+							.size__el.size__el--active 25 см
+							.size__el 30 см
+							.size__el 35 см
+						.duff
+							.duff__el.duff__el--active Традиционное
+							.duff__el Тонкое
+						.product-footer
+							.product-price 860 р.
+							.product-add.toggle-cart-animate В корзину
+							.product-incr
+								+incr()
+				.product-el
+					.product-label.product-label--black специальная цена
+					a(href="#").product__img
+						.product__img-el(style="background-image:url('img/item-pizza-1.png')")
+					.product__cont
+						a(href="#").product__title Рокки Роутс
+						.product__text Сыр, пицца-соус, ананас, сыр, перец болгарский, куриное филе, пицца-соус, ананас
+						.size
+							.size__el.size__el--active 25 см
+							.size__el 30 см
+							.size__el 35 см
+						.duff
+							.duff__el.duff__el--active Традиционное
+							.duff__el Тонкое
+						.product-footer
+							.product-price 860 р.
+							.product-add.toggle-cart-animate В корзину
+							.product-incr
+								+incr()
+	//category
+	.main-cont
+		.category
+			a.category__el(style="background-image:url('img/sets.jpg')" href="#")
+				.category__el-title Сеты
+			a.category__el(style="background-image:url('img/sups.jpg')" href="#")
+				.category__el-title Супы
+			a.category__el(style="background-image:url('img/hot.jpg')" href="#")
+				.category__el-title Горячее
+			a.category__el(style="background-image:url('img/salad.jpg')" href="#")
+				.category__el-title Салаты
+			a.category__el(style="background-image:url('img/drinks.jpg')" href="#")
+				.category__el-title Напитки
+			a.category__el(style="background-image:url('img/deserts.jpg')" href="#")
+				.category__el-title Десерты
+
+//sale
+.sale-wrap
+	.main-cont
+		.sale
+			.sale-slider-wrap
+				.sale-slider
+					.sale-slider__el(style="background-image:url('img/sale.jpg')")
+					.sale-slider__el(style="background-image:url('img/sale.jpg')")
+					.sale-slider__el(style="background-image:url('img/sale.jpg')")
+			.sale-info
+				.sale-title АКЦИИ
+				.sale-text Постоянно проходящие акции в Trattoria сделают покупку еще более привлекательной и выгодной. Вы можете воспользоваться промокодом указанным в действующих акциях на сайте, нашем приложении или соцсетях
+
++footer()
+include ./block_html/_script.pug

@@ -1,0 +1,259 @@
+mixin modal()
+	//block modal
+	.modal-layer
+		.modal-cont
+			.modal-filter
+			.modal-wrap
+				//modal-registration
+				.modal(data-modal="registration")
+					.modal-header
+						.modal-close
+							+icon("close","icon")
+						.modal-title Регистрация
+					.modal-content
+						form(action="#")
+							.input-cont
+								.input-row
+									input(type="text"  data-input="Ваше имя").input-animate
+							.input-cont.input-cont--half
+								.input-row
+									input(type="text"  data-input="Телефон").input-animate
+								.input-row
+									input(type="text"  data-input="Email").input-animate
+							.input-cont
+								.input-row
+									input(type="password"  data-input="Пароль").input-animate
+							.input-cont
+								.input-row
+									input(type="password"  data-input="Повторите пароль").input-animate
+							.login-remember
+								.check-el
+									label.style-label.style-label--checkbox
+										input(type="checkbox").sytle-input
+										.sytle-input-element
+											+icon("checked","icon-check")
+										.sytle-input-text Я ознакомился с #[a(href="#") политикой конфиденциальности], #[a(href="#") публичной офертой] и даю согласие на обработку моих персональных данных
+							.modal-get
+								input(type="submit" value="Зарегистрировать").btn--lg.btn--yellow
+
+				//modal-registration-end
+
+				//modal-enter
+				.modal(data-modal="enter")
+					.modal-header
+						.modal-close
+							+icon("close","icon")
+						.modal-title Авторизация
+					.modal-content
+						form(action="#")
+							.input-cont
+								.input-row
+									input(type="text"  data-input="Телефон").input-animate
+							.input-cont
+								.input-row
+									input(type="password"  data-input="Пароль").input-animate
+							.modal-foget
+								.link--blue.show-modal(data-modal="pass") Забыли пароль ?
+							.modal-get
+								input(type="submit" value="Войти").btn--lg.btn--yellow
+							.modal-account
+								.link--text.modal-get(data-modal="registration") Нет аккаунта? зарегистрироваться
+				//modal-enter-end
+
+				//modal-town
+				.modal(data-modal="town")
+					.modal-header
+						.modal-close
+							+icon("close","icon")
+						.modal-title Выберите город
+					.modal-content.modal-content--town
+						.modal-town
+							.modal-town__el.toggle-close-modal Москва
+							.modal-town__el.toggle-close-modal Санкт-Петербург
+				//modal-town-end
+
+
+				//modal-pass
+				.modal(data-modal="pass")
+					.modal-header
+						.modal-close
+							+icon("close","icon")
+						.modal-title Восстановление пароля
+					.modal-content
+						form(action="#")
+							.input-cont
+								.input-row
+									input(type="text"  data-input="Телефон").input-animate
+							.modal-get
+								input(type="submit" value="Восстановить").btn--lg.btn--yellow
+				//modal-pass-end
+
+
+				//ingr
+				.modal.modal--lg(data-modal="ingr")
+					.modal-content
+						.modal-close
+							+icon("close-fat","icon")
+						.modal-title.modal-title--lg Добавь любой ингредиент к пицце на свой вкус
+						.modal-title-add Добавить можно не более 6 ингредиентов, иначе пицца не пропечется.
+						.add-ingr-row
+							.add-ingr__list
+								- for (var j=0;j<20;j++)
+									.add-ingr__el
+										.incr__minus.incr__nav.incr--one
+											+icon("minus","icon")
+										.incr__val
+											span 1
+											.incr__val-count шт.
+										//.add-ingr__el-img(style="background-image:url('img/snack.jpg')")
+										.add-ingr__el-name Тартар
+										.add-ingr__el-weight 50г
+										.add-ingr__el-price 30р
+										.incr__plus.incr__nav
+											+icon("plus","icon")
+						.add-ingr-footer
+							.add-ingr-cost
+								.add-ingr-cost__text Сумма:
+								.add-ingr-cost__val 1598р
+								.add-ingr-item  у вас 2 ингридиента
+							.add-ingr-clear Cбросить выбор
+							.add-ingr-get Cохранить
+				//ingr === end
+
+
+				//TY message
+				.modal.modal--md(data-modal="TY")
+					.modal-header
+						.modal-close
+							+icon("close","icon")
+						.modal-title Спасибо! <br> Ваш заказ принят
+					.modal-content
+						.modal-text Наши менеджеры свяжутся с вами в ближайшее время для подтверждения заказа
+						a(href="/").btn--md.btn--light.btn--full На главную
+				//TY message === end
+
+				//location message
+				.modal.modal--md(data-modal="location")
+					.modal-header
+						.modal-close
+							+icon("close","icon")
+						.modal-title Выберите <br> ваш город!
+					.modal-content
+						.position-list.nice-scroll
+							- for (var i=0;i<4;i++)
+								a(href="#").position-list__el Москва
+								a(href="#").position-list__el Волгоград
+								a(href="#").position-list__el Уфа
+								a(href="#").position-list__el Казань
+								a(href="#").position-list__el Владивосток
+				//location message === end
+
+				//deliver message
+				.modal.modal--md(data-modal="deliver")
+					.modal-header
+						.modal-close
+							+icon("close","icon")
+						.modal-title Выберите тип доставки
+					.modal-content
+						.btn--md.btn--light.btn--full.hide-modal Доставка
+						br
+						.btn--md.btn--light.btn--full.hide-modal Самовывоз
+				//deliver message === end
+
+				//address message
+				.modal.modal--md(data-modal="disposal")
+					.modal-header
+						.modal-close
+							+icon("close","icon")
+						.modal-title Ваш адрес доставки
+					.modal-content
+						form(action="#").login-form
+							.input-cont
+								.input-row
+									input(type="text"  data-input="Ваша улица").input-animate
+							.input-cont
+								.input-row
+									input(type="text"  data-input="Ваш дом").input-animate
+							//toggle class hidden for msg
+
+						.btn--md.btn--mark.btn--full.hide-modal Подтвердить
+						p.type--center или
+						.btn--md.btn--light.btn--full.hide-modal Выбрать самовывоз
+				//address message === end
+
+				//unworked message
+				.modal.modal--md(data-modal="unworked")
+					.modal-header
+						.modal-close
+							+icon("close","icon")
+						.modal-title Ресторан не работает :(
+					.modal-content
+						.unworked-text Рестораны доставки в г. Москва работают с 10 до 22:30
+						.btn--md.btn--light.btn--full.hide-modal Хорошо
+				//unworked message === end
+
+				//profile message
+				.modal(data-modal="profile")
+					.modal-header
+						.modal-close
+							+icon("close","icon")
+						.modal-title Профиль
+					.modal-content
+						form(action="#")
+							.input-cont
+								.input-row
+									input(type="text" data-input="Фамилия").input-animate
+							.input-cont
+								.input-row
+									input(type="text" data-input="Имя").input-animate
+							.input-cont
+								.input-row
+									input(type="text" data-input="Телефон").input-animate
+							.input-cont
+								.input-row
+									input(type="text" data-input="Дата рождения").input-animate
+							.input-cont
+								.input-row
+									input(type="text" data-input="Ваша почта").input-animate
+							.btn--md.btn--light.btn--full Отправить
+				//profile message === end
+
+				//address message
+				.modal.modal--md(data-modal="address")
+					.modal-header
+						.modal-close
+							+icon("close","icon")
+						.modal-title Ваш адрес доставки
+					.modal-content
+						form(action="#")
+							.input-cont
+								.input-row
+									input(type="text"  data-input="Название адреса (дом, работа)").input-animate
+							.input-cont
+								.input-row
+									input(type="text" data-input="Улица").input-animate
+							.input-cont
+								.input-row
+									select.select-beauty
+										- for (var i=0;i<5;i++)
+										option Адрес 1
+										option Адрес 2
+										option Адрес 3
+										option Адрес 4
+										option Адрес 5
+										option Адрес 6
+										option Адрес 7
+							.input-cont.input-cont--half
+								.input-row
+									input(type="text"  data-input="Квартира").input-animate
+								.input-row
+									input(type="text"  data-input="Подъезд").input-animate
+							.input-cont.input-cont--half
+								.input-row
+									input(type="text"  data-input="Этаж").input-animate
+								.input-row
+									input(type="text"  data-input="Домофон").input-animate
+						.btn--md.btn--light.btn--full Отправить
+				//address message === end
+
+	//block modal end

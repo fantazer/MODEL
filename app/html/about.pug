@@ -1,0 +1,35 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
++header(page ="header--main-page")
+.content.text
+	// add class .text to container for beauty type
+	.main-cont
+		h1 О нас
+		h2 Что такое PIZZA
+		p Построенная по последнему слову техники пиццерия и прежде всего, люди, команда профессионалов, имеющая за плечами большой опыт, которых можно назвать фанатами своего дела.
+
+		h2 Что такое пицца?
+		p Это всеми любимый и простой в приготовлении, как может показаться на первый взгляд продукт, но как говорится «дьявол в деталях».
+		p Тесто – наиважнейшая часть. Каждый день мы сами замешиваем тесто, никаких полуфабрикатов и заморозки, только натуральный продукт по классической технологии.
+		ul
+			li Сыр - основной компонент правильной пиццы, только моцарелла, только лучшие поставщики.
+			li Начинка – много и только высшего качества
+			li Томатный соус – мы используем натуральный соус.
+//card-end
+.sale-wrap
+	.main-cont
+		.sale
+			.sale-slider-wrap
+				.sale-slider
+					.sale-slider__el(style="background-image:url('img/sale.jpg')")
+					.sale-slider__el(style="background-image:url('img/sale.jpg')")
+					.sale-slider__el(style="background-image:url('img/sale.jpg')")
+			.sale-info
+				.sale-title АКЦИИ
+				.sale-text Постоянно проходящие акции в Trattoria сделают покупку еще более привлекательной и выгодной. Вы можете воспользоваться промокодом указанным в действующих акциях на сайте, нашем приложении или соцсетях
+
++footer()
+//+mobile-menu()
+
+include ./block_html/_script.pug

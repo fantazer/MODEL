@@ -1,0 +1,38 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
++header(page ="header--main-page")
+.content.text
+	// add class .text to container for beauty type
+	.main-cont
+		.text
+			h1 Политика конфеденциальности
+			p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aliquid aspernatur commodi consequuntur dolor ducimus eaque eveniet facere ipsam iste nam, necessitatibus nulla perspiciatis quaerat quia quod soluta, tempora tempore. atibus nulla perspiciatis quaerat quia quod soluta, tempora tempore.atibus nulla perspiciatis quaerat quia quod soluta, tempora tempore.
+			h3 Политика отношение пользователей
+			p Ad consequatur dolorem in nesciunt pariatur quibusdam quisquam reiciendis totam unde vel? Consequuntur deleniti eos iusto magni obcaecati officiis porro quidem quo repudiandae temporibus. Ad culpa eos praesentium repudiandae sit ullam veniam?
+			ul
+				li Список 1
+				li Список 2
+				li Список 3
+				li Список 4
+				li Список 5
+			p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias animi blanditiis cupiditate debitis enim eos ipsa iusto, maxime nam necessitatibus nemo nesciunt non, numquam omnis optio perspiciatis placeat provident quibusdam quos reiciendis reprehenderit repudiandae unde velit veritatis voluptas! Asperiores doloribus explicabo laboriosam minus neque omnis porro, possimus ratione vitae voluptatem. Dolore eos explicabo fugiat magni qui sequi sit vel voluptatibus.
+			p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias animi blanditiis cupiditate debitis enim eos ipsa iusto, maxime nam necessitatibus nemo nesciunt non, numquam omnis optio perspiciatis placeat provident quibusdam quos reiciendis reprehenderit repudiandae unde velit veritatis voluptas! Asperior
+			p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias animi blanditiis cupiditate debitis enim eos ipsa iusto, maxime nam necessitatibus nemo nesciunt non, numquam omnis optio perspiciatis placeat provident quibusdam quos reiciendis reprehenderit repudiandae unde velit veritatis voluptas! Asperior
+//card-end
+.sale-wrap
+	.main-cont
+		.sale
+			.sale-slider-wrap
+				.sale-slider
+					.sale-slider__el(style="background-image:url('img/sale.jpg')")
+					.sale-slider__el(style="background-image:url('img/sale.jpg')")
+					.sale-slider__el(style="background-image:url('img/sale.jpg')")
+			.sale-info
+				.sale-title АКЦИИ
+				.sale-text Постоянно проходящие акции в Trattoria сделают покупку еще более привлекательной и выгодной. Вы можете воспользоваться промокодом указанным в действующих акциях на сайте, нашем приложении или соцсетях
+
++footer()
+//+mobile-menu()
+
+include ./block_html/_script.pug

@@ -1,0 +1,97 @@
+mixin footer()
+	//block footer
+	.fix-soc
+		.soc-row
+			-
+				var items = [
+				'soc-vk',
+				'soc-facebook',
+				'soc-instagram',
+				'soc-twitter',
+				'soc-youtube'
+				];
+			each item in items
+				a(href="#").soc-row__el
+					svg(class='icon')
+						use(xlink:href="#" + item)
+
+
+	.footer-info-wrap
+		.main-cont
+			.footer-info
+				.footer-info__coll.footer-info__coll-deliver
+					.footer-info__title Доставка за 60 минут
+					.footer-info__text Доставка производится ТОЛЬКО в пределах нашей зоны доставки.
+					.footer-info__text По другим адресам доставка НЕ ПРОИЗВОДИТСЯ.
+					.footer-info__text По предварительным заказам, оформленным к определенному времени, допускается отклонение плюс-минус 15-20 минут.
+					.footer-info__text Самовывоз с 11:00 до 23:00 по адресу ул.Московская, 198
+
+				.footer-info__coll
+					.footer-info__title Работаем с 10 до 23
+					.footer-info__text Без выходных
+				.footer-info__coll
+					.footer-info__title Бесплатная доставка
+					.footer-info__text При заказе от 500 руб
+				.footer-info__coll.footer-info__map(style="background-image:url('img/map.jpg')")
+					.filter.filter--yellow
+					.footer-info__map-icon
+						+icon("compass","icon")
+					.footer-info__map-text Зона доставки
+			.footer-map-wrap
+				.footer-map
+					//pick map code her
+	.footer-wrap
+		.main-cont
+			.footer
+				.footer-comp
+					.footer-company Cheez © 2019
+					a(href="#") Политика конфиденциальности
+					a(href="#") Публичная оферта
+					.soc-row
+						-
+							var items = [
+							'soc-vk',
+							'soc-facebook',
+							'soc-instagram',
+							'soc-twitter',
+							'soc-youtube'
+							];
+						each item in items
+							a(href="#").soc-row__el
+								svg(class='icon')
+									use(xlink:href="#" + item)
+				.footer-nav
+					.footer-nav__list
+						-
+							var items = [
+							'Пицца',
+							'Гарниры',
+							'Акции',
+							'Суши',
+							'Горячие закуски',
+							'Оплата',
+							'Роллы',
+							'Напитки',
+							'О нас',
+							];
+						each item in items
+							a(href="#").footer-nav__el #{item}
+
+				.footer-contact
+					a(href="tel:+7 385 257 17 76").footer-phone +7 385 257 17 76
+					a(href="mailto:vkusno@pravilasushi.com").footer-mail vkusno@pravilasushi.com
+					.get-pay
+						.get-pay__title Мы принимаем:
+						.pay-row
+							.pay-row__el
+								+icon("mastercard--color","icon")
+							.pay-row__el
+								+icon("visa","icon")
+							.pay-row__el
+								+icon("paypal","icon")
+
+					//
+					a(href="/").create
+						span Разработка сайта:
+						img(src="img/jq.svg", alt="")
+	//block footer end

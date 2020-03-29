@@ -1,0 +1,104 @@
+//  ============================ Typography ============================
+
+//webfont('RUB', 'rouble-webfont', 'normal')
+//Add fotn rub write .rub a - (a,b,c,d - change type font)
+
+//font(name,file,size)
+font('RobotoSlab','RobotoSlab-Light',300)
+font('RobotoSlab','RobotoSlab-Regular',400)
+font('RobotoSlab','RobotoSlab-Bold',700)
+
+
+$v-font =  'RobotoSlab', sans-serif
+
+typeSize(fontSm,font)
+	+below(768px)
+		font-size font px
+	font-size fontSm px
+
+/*
+font-size 12px
+@extend .type--sm
+
+font-size 16px
+@extend .type--main
+
+font-size 18px
+@extend .type--md
+
+font-size 24px
+@extend .type--lg
+
+font-size 32px
+@extend .type--xl
+
+font-size 48px
+@extend .type--xxl
+*/
+
+.type--xs
+	typeSize(12,10)
+
+.type--sm
+	typeSize(12,12)
+
+.type--main
+	typeSize(16,12)
+
+.type--md
+	typeSize(18,16)
+
+.type--lg
+	typeSize(24,18)
+
+.type--xl
+	typeSize(32,24)
+
+.type--xxl
+	typeSize(48,32)
+
+.type--bold
+	font-weight bold
+
+h1
+	@extend .type--xxl
+h2
+	@extend .type--xl
+h3
+	@extend .type--lg
+h4
+	@extend .type--md
+h5
+	@extend .type--main
+
+a
+	color $link-color
+	text-decoration: none
+	&:hover
+		color darken($link-color,20)
+	&:visiter
+		color darken($link-color,30)
+
+p
+	@extend .type--main
+
+.link--mark
+	color $blue
+	&:hover
+		color darken($mark,20)
+	&:visiter
+		color darken($mark,30)
+
+.link--main
+	color $link-color
+	hover-underline($link-color)
+	&:hover
+		color darken($link-color,20)
+	&:visiter
+		color darken($link-color,30)
+
+.link--text
+	color $link-color
+	text-decoration underline
+	&:hover
+		text-decoration none

@@ -1,0 +1,114 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
++header(page ="header--main-page")
+
+
+.content
+	.main-cont
+		.title-row
+			.title-row-back
+				+icon("round-arrow-left","icon")
+			span Оформление заказа
+		.order-form
+			.input-cont
+				.input-row
+					input(type="text"  data-input="Ваше имя").input-animate
+			.input-cont.input-cont--half
+				.input-row
+					input(type="text"  data-input="Телефон").input-animate
+				.input-row
+					input(type="text"  data-input="Email").input-animate
+			.radio-cont
+				+radio('Наличные курьеру')
+				+radio('Картой курьеру')
+				+radio('Онлайн')
+			//tab controll
+			.order-form__tab
+				.order-form__tab-el.order-form__tab-el--active(data-tab="deliver") Доставка
+				.order-form__tab-el(data-tab="self") Самовывоз
+			.order-form__border
+				.order-form__border-el
+
+
+			//tab container
+			.order-form__tab-container.order-form__tab-container-active(data-tab="deliver")
+				.order-form__town Ваш город:
+					span Москва
+				.input-cont
+					.input-row
+						input(type="text"  data-input="Улица").input-animate
+				.input-cont.input-cont--three
+					.input-row
+						input(type="text" data-input="Дом").input-animate
+					.input-row
+						input(type="text" data-input="Квартира").input-animate
+					.input-row
+						input(type="text" data-input="Этаж").input-animate
+				.input-cont.input-cont--three
+					.input-row
+						input(type="text" data-input="Корпус").input-animate
+					.input-row
+						input(type="text" data-input="Подьезд").input-animate
+					.input-row
+						input(type="text" data-input="Домофон").input-animate
+			//tab container
+			.order-form__tab-container(data-tab="self")
+				.order-form__town Ваш город:
+					span Москва
+				.order-form__market
+					select.select-beauty
+						option(data-display="Выберите ресторан") Новый ресторан
+						option Первый ресторан
+						option Второй ресторан
+						option Третий ресторан
+						option Третий ресторан
+						option Третий ресторан
+
+			.order-form-divider
+			.input-cont.input-cont--half
+				.input-row
+					select.select-beauty
+						option Сегодня
+						option Завтра
+						option 6 марта
+						option 7 марта
+						option 8 марта
+						option 9 марта
+				.input-row
+					select.select-beauty
+						option 10:30
+						option 10:45
+						option 11:00
+						option 11:15
+						option 11:30
+						option 11:45
+						option 12:00
+			.order-form-inc
+				.order-form-inc__text Количество персон
+				.elements-icr-block
+					.incr
+						.incr__minus.incr__nav.incr--one
+							+icon("minus","icon")
+						.incr__val
+							span 1
+							.incr__val-coner
+						.incr__plus.incr__nav
+							+icon("plus","icon")
+
+			textarea(name="", cols="30", rows="10" placeholder="Комментарий")
+
+			.login-remember
+				.check-el
+					label.style-label.style-label--checkbox
+						input(type="checkbox").sytle-input
+						.sytle-input-element
+							+icon("checked","icon-check")
+						.sytle-input-text Я ознакомился с #[a(href="#") политикой конфиденциальности], #[a(href="#") публичной офертой] и даю согласие на обработку моих персональных данных
+			.order-form-get
+				.btn--lg.btn--yellow  Оформить
++footer()
+//+mobile-menu()
+
+include ./block_html/_script.pug
+

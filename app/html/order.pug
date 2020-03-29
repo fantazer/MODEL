@@ -1,0 +1,49 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
+
++header()
+.content
+	.main-cont
+			.title-row
+				.title-row-back
+					+icon("round-arrow-left","icon")
+				span Ваш заказ
+			.order
+				.order-cont
+					.order-item
+						- for (var i=0;i<3;i++)
+							.basket__el
+								.basket__el-info
+									a(href="#" style="background-image:url('img/item-pizza-1.png')" ).basket__img
+									.basket__name
+										a(href="#").basket__name-text Малибу
+										.basket__adds
+											.basket__adds-el <b>2x</b> соус тар-тар
+											.basket__adds-el <b>2x</b> соус тар-тар
+								.basket__el-change
+									.basket__inc
+										+incr()
+									.basket__price 120 р.
+									.basket__delete
+										+icon("garbage","icon")
+					.total
+						.total-text Сумма заказа
+						.total-val 3 895 ₽
+						.total-get Оформить заказ
+					.title Рекомендуем попробовать
+					.order-add
+						- for (var i=0;i< 4;i++)
+							+product()
+
+					.title Добавьте соус
+					.order-add
+						- for (var i=0;i< 4;i++)
+							+product()
+
+
+
++footer()
+//+mobile-menu()
+
+include ./block_html/_script.pug

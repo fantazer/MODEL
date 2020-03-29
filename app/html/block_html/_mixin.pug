@@ -1,0 +1,82 @@
+mixin icon(name,cls)
+  svg(class=cls)
+    use(xlink:href="#" + name)
+
+mixin checkbox(text,disable)
+  .check-el
+    if disable
+      label.style-label.style-label--checkbox.style-label--disable
+        input(type="checkbox").sytle-input
+        .sytle-input-element
+          +icon("checked","icon-check")
+        .sytle-input-text=text
+    else
+      label.style-label.style-label--checkbox
+        input(type="checkbox").sytle-input
+        .sytle-input-element
+          +icon("checked","icon-check")
+        .sytle-input-text=text
+mixin radio(text,group,disable)
+  .check-el
+    if disable
+      label.style-label.style-label--radio.style-label--disable
+        input(type="radio" name="group").sytle-input
+        .sytle-input-element
+          .icon-radio
+        .sytle-input-text=text
+    else
+      label.style-label.style-label--radio
+        input(type="radio" name="group").sytle-input
+        .sytle-input-element
+          .icon-radio
+        .sytle-input-text=text
+
+mixin incr(a)
+  - a = a || 1
+  .elements-icr-block
+    .incr
+      .incr__minus.incr__nav
+        +icon("minus","icon")
+      .incr__val
+        span=a
+        .incr__val-coner
+      .incr__plus.incr__nav
+        +icon("plus","icon")
+
+mixin incr-cheese(a)
+  - a = a || 1
+  .elements-icr-block
+    .incr.incr--cheese
+      .incr__minus.incr__nav
+        +icon("minus-cheese","icon")
+      .incr__val
+        span=a
+        .incr__val-coner
+      .incr__plus.incr__nav
+        +icon("plus-cheese","icon")
+
+mixin product()
+  .product-el
+    .product-label пицца дня
+    a(href="#").product__img
+      .product__img-el(style="background-image:url('img/item-pizza-1.png')")
+    .product__cont
+      a(href="#").product__title Рокки Роутс
+      .product__text Сыр, пицца-соус, ананас, сыр, перец болгарский, куриное филе, пицца-соус, ананас
+        span.product__add.tooltip
+          +icon("plus","icon")
+          .top
+            i
+            | добавить ингредиенты
+      .size
+        .size__el.size__el--active 25 см
+        .size__el 30 см
+        .size__el 35 см
+      .duff
+        .duff__el.duff__el--active Традиционное
+        .duff__el Тонкое
+      .product-footer
+        .product-price 860 р.
+        .product-add.toggle-cart-animate В корзину
+        .product-incr
+          +incr()

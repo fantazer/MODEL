@@ -1,0 +1,3 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="22" viewBox="0 0 20 22">
+  <path id="trash" d="M7,4V3A2,2,0,0,1,9,1h6a2,2,0,0,1,2,2V4h3a2,2,0,0,1,2,2V8a2,2,0,0,1-2,2h-.08L19,21a2,2,0,0,1-2,2H7a1.979,1.979,0,0,1-2-1.917L4.08,10H4A2,2,0,0,1,2,8V6A2,2,0,0,1,4,4ZM7,6H4V8H20V6H7Zm-.914,4L7,21H17l0-.083L17.913,10ZM15,4V3H9V4Z" transform="translate(-2 -1)" fill-rule="evenodd"/>
+</svg>
