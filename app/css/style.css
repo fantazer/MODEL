@@ -2291,25 +2291,6 @@ body {
       -ms-flex-flow: column;
           flex-flow: column;
 }
-@media only screen and (max-width: 480px) {
-  .product-el {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: start;
-    -webkit-align-items: flex-start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-    -webkit-flex-flow: row;
-        -ms-flex-flow: row;
-            flex-flow: row;
-  }
-}
 .product-label {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2344,7 +2325,6 @@ body {
   .product-label {
     padding: 10px 10px;
     font-size: 8px;
-    top: -10px;
   }
 }
 .product-label:hover {
@@ -2410,13 +2390,6 @@ body {
       -ms-flex-align: center;
           align-items: center;
 }
-@media only screen and (max-width: 480px) {
-  .product__img {
-    width: 80px;
-    height: 80px;
-    margin-right: 20px;
-  }
-}
 .product__img img {
   margin: 0 auto;
   -webkit-transition: all 0.4s;
@@ -2436,12 +2409,6 @@ body {
       -ms-flex-positive: 1;
           flex-grow: 1;
 }
-@media only screen and (max-width: 480px) {
-  .product__cont {
-    width: -webkit-calc(100% - 100px);
-    width: calc(100% - 100px);
-  }
-}
 .product__img-el {
   -webkit-transition: all 0.4s;
           transition: all 0.4s;
@@ -2452,6 +2419,11 @@ body {
   background-position: center center;
   background-size: contain;
   padding: 50% 10%;
+}
+@media only screen and (max-width: 640px) {
+  .product__img-el {
+    padding: 35% 10%;
+  }
 }
 .product__title {
   margin-bottom: 20px;
@@ -2465,7 +2437,7 @@ body {
   margin: 0 auto;
   opacity: 0.8;
   margin-bottom: auto;
-  line-height: 1.4;
+  line-height: 1.6;
 }
 .product-cont {
   margin: 70px 0;
@@ -2729,6 +2701,7 @@ body {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-top: 20px;
 }
 .product-price {
   width: 50%;
@@ -2879,7 +2852,7 @@ body {
 }
 @media only screen and (max-width: 480px) {
   .size__el {
-    font-size: 9px;
+    font-weight: 700;
   }
 }
 .size__el:hover {

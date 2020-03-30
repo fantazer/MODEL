@@ -800,11 +800,6 @@ body
 
 // PRODUCT
 .product-el
-	+below(480px)
-		f()
-		justify-content: space-between
-		align-items: flex-start
-		flex-flow row
 	background-color #ffffff
 	tr(all)
 	position: relative
@@ -816,7 +811,6 @@ body
 	+below(480px)
 		padding: 10px 10px
 		font-size: 8px
-		top -10px
 	flex(mid)
 	tr(all)
 	cp()
@@ -860,9 +854,6 @@ body
 		transform scale(0.96)
 
 .product__img
-	+below(480px)
-		size 80px
-		margin-right: 20px
 	margin-bottom: 20px
 	flex(mid)
 	img
@@ -871,13 +862,14 @@ body
 		width: 100%
 
 .product__cont
-	+below(480px)
-		width calc(100% - 100px)
+
 	f()
 	fl()
 	flex-grow 1
 
 .product__img-el
+	+below(640px)
+		padding: 35% 10%
 	tr(all)
 	width: 100%
 	height: 100%
@@ -897,7 +889,7 @@ body
 	margin: 0 auto
 	opacity .8
 	margin-bottom: auto
-	line-height: 1.4
+	line-height: 1.6
 
 .product-cont
 	+below(1024px)
@@ -1060,6 +1052,7 @@ body
 
 .product-footer
 	flex(between)
+	margin-top: 20px
 .product-price
 	+below(1200px)
 		font-size: 14px
@@ -1148,7 +1141,7 @@ body
 	margin-top: 20px
 .size__el
 	+below(480px)
-		font-size: 9px
+		font-weight:700
 	@extend .type--sm
 	cp()
 	tr()
