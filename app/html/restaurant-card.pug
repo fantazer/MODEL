@@ -1,0 +1,22 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
+.page
+	+header()
+	.content
+		.main-cont
+			.title-row
+				.title-row__text Кафе
+				.lk-switch
+					.lk-switch__el.lk-switch__el--active Списком
+					.lk-switch__el На карте
+			.restaurant
+				- for (var i=0;i<7;i++)
+					.restaurant-item
+						a(href="#" style="background-image:url('img/restaurant.jpg')").restaurant-item__img
+						.restaurant-item__cont
+							a(href="#").restaurant-item__title ул. Глушко, д 17
+							.restaurant-item__time 11:00 - 24:00 (Вс - Чт)
+							.restaurant-item__time 11:00 - 01:00 (Пт - Сб)
+	+footer()
+include ./block_html/_script.pug

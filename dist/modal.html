@@ -1,0 +1,1423 @@
+<!DOCTYPE html>
+<html>
+<!--create by ANATOLY KUZNETSOV-->
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="format-detection" content="telephone=no" />
+    <!--colors-tabs-->
+    <meta name="theme-color" content="#000" />
+    <meta name="msapplication-navbutton-color" content="#000" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="#000" />
+    <!--SEO-->
+    <title>Document</title>
+    <meta name="description" itemprop="description" content="" />
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/style-edit.css" />
+</head>
+
+<body>
+    <style type="text/css">
+        .btn-wrap {
+        		display: flex;
+        		flex-wrap: wrap;
+        		flex-flow: column;
+        		align-items: baseline;
+        	}
+    </style>
+    <!--block header-->
+    <div class="header">
+        <!--header-top-->
+        <div class="header-top-wrap">
+            <div class="main-cont">
+                <div class="header-top">
+                    <div class="head-toggle">
+                        <svg class="icon icon-open">
+                            <use xlink:href="#menu"></use>
+                        </svg>
+                        <svg class="icon icon-close">
+                            <use xlink:href="#close"></use>
+                        </svg>
+                    </div>
+                    <a class="logo" href="/">
+                        <img src="img/logo.svg" alt="" />
+                    </a>
+                    <div class="header-location">
+                        <div class="header-info">
+                            <div class="header-info__icon">
+                                <svg class="icon">
+                                    <use xlink:href="#location"></use>
+                                </svg>
+                            </div>
+                            <div class="header-info__val">Санкт-Петербург</div>
+                        </div>
+                        <div class="header-info__text">Доставка за 45-90 минут</div>
+                    </div>
+                    <div class="header-contact">
+                        <div class="header-info">
+                            <div class="header-info__icon">
+                                <svg class="icon">
+                                    <use xlink:href="#phone"></use>
+                                </svg>
+                            </div>
+                            <div class="header-info__val">
+                                <a href="tel:+7 (7172) 767 767">+7 (7172) 767 767</a>
+                                <span class="divider">|</span>
+                                <a href="tel:+7 (707) 988 78 87">+7 (707) 988 78 87</a>
+                            </div>
+                        </div>
+                        <div class="header-info__text">Сегодня 10 - 24</div>
+                    </div>
+                    <a class="header-auth header-auth--true" href="#">
+                        <!-- toggle .header-auth--true-->
+                        <svg class="icon">
+                            <use xlink:href="#user"></use>
+                        </svg>
+                        <div class="header-auth-state--true">
+                            <span>Войти</span>
+                        </div>
+                        <div class="header-auth-state--false">
+                            <span>Александр</span>
+                            <div class="header-auth__bonus">
+                                <span>356 Б</span>
+                            </div>
+                        </div>
+                    </a>
+                    <div class="cart-wrap cart-wrap--mobile">
+                        <div class="cart">
+                            <svg class="icon icon--close">
+                                <use xlink:href="#close"></use>
+                            </svg>
+                            <svg class="icon icon--open">
+                                <use xlink:href="#cart"></use>
+                            </svg>
+                            <div class="cart-val">33</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="slide-menu">
+            <div class="slide-row">
+                <div class="slide-header-auth">
+                    <!-- toggle .slide-header-auth--true-->
+                    <svg class="icon">
+                        <use xlink:href="#user"></use>
+                    </svg>
+                    <div class="slide-header-auth-state--true">
+                        <span>Войти</span>
+                    </div>
+                    <div class="slide-header-auth-state--false">
+                        <span>Александр</span>
+                        <div class="slide-header-auth__bonus">
+                            <span>356 Б</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-row">
+                <div class="slide-menu__list">
+                    <a class="slide-menu__list-el" href="#">Акции</a>
+                    <a class="slide-menu__list-el" href="#">Доставка</a>
+                    <a class="slide-menu__list-el" href="#">О нас</a>
+                </div>
+            </div>
+            <div class="slide-row">
+                <div class="slide-header-location">
+                    <div class="slide-header-info">
+                        <div class="slide-header-info__icon">
+                            <svg class="icon">
+                                <use xlink:href="#location"></use>
+                            </svg>
+                        </div>
+                        <div class="slide-header-info__val">Санкт-Петербург</div>
+                    </div>
+                    <div class="slide-header-info__text">Доставка за 45-90 минут</div>
+                </div>
+            </div>
+            <div class="slide-row">
+                <div class="slide-header-contact">
+                    <div class="slide-header-info">
+                        <div class="slide-header-info__icon">
+                            <svg class="icon">
+                                <use xlink:href="#phone"></use>
+                            </svg>
+                        </div>
+                        <div class="slide-header-info__val">
+                            <a href="tel:+7 (7172) 767 767">+7 (7172) 767 767</a>
+                        </div>
+                    </div>
+                    <div class="slide-header-info__text">Сегодня 10 - 24</div>
+                </div>
+            </div>
+        </div>
+        <div class="header-menu-wrap">
+            <div class="main-cont">
+                <div class="header-menu">
+                    <a class="logo" href="/">
+                        <img src="img/logo.svg" alt="" />
+                    </a>
+                    <div class="header-nav">
+                        <a class="header-nav__el" href="#">Пицца</a>
+                        <a class="header-nav__el" href="#">Суши</a>
+                        <a class="header-nav__el" href="#">Закуски</a>
+                        <a class="header-nav__el" href="#">Гарниры</a>
+                        <a class="header-nav__el" href="#">Комбо</a>
+                        <a class="header-nav__el" href="#">Напитки</a>
+                    </div>
+                    <div class="header-nav header-nav--add">
+                        <a class="header-nav__el" href="#">Акции</a>
+                        <a class="header-nav__el" href="#">Доставка</a>
+                        <a class="header-nav__el" href="#">О нас</a>
+                    </div>
+                    <div class="cart-wrap cart-wrap--desctop">
+                        <div class="cart-cost">2 850 ₽</div>
+                        <div class="cart">
+                            <svg class="icon icon--close">
+                                <use xlink:href="#close"></use>
+                            </svg>
+                            <svg class="icon icon--open">
+                                <use xlink:href="#cart"></use>
+                            </svg>
+                            <div class="cart-val">33</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="basket-wrap">
+            <div class="main-cont">
+                <div class="basket">
+                    <div class="basket-wrap-coner"></div>
+                    <div class="basket-empty">
+                        <div class="basket-empty__title">Ваша корзина пуста.</div>
+                        <div class="basket-empty__text">Добавь интересующие товары из меню сайта</div>
+                    </div>
+                    <div class="header__sub-arrow-up header__sub-arrow">
+                        <div class="header__sub-arrow-wrap">
+                            <svg class="icon">
+                                <use xlink:href="#arrow-up"></use>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="basket-container">
+                        <div class="basket__el">
+                            <div class="basket__el-info">
+                                <div class="basket__img" style="background-image:url('img/item-pizza-1.png')"></div>
+                                <div class="basket__name">
+                                    <a class="basket__name-text" href="#">Малибу 1</a>
+                                    <div class="basket__adds">
+                                        <div class="basket__adds-el">
+                                            <b>2x</b>соус тар-тар</div>
+                                        <div class="basket__adds-el">
+                                            <b>2x</b>соус тар-тар</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="basket__el-change">
+                                <div class="basket__inc">
+                                    <div class="elements-icr-block">
+                                        <div class="incr">
+                                            <div class="incr__minus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#minus"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="incr__val">
+                                                <span>1</span>
+                                                <div class="incr__val-coner"></div>
+                                            </div>
+                                            <div class="incr__plus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#plus"></use>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="basket__price">120 р.</div>
+                                <div class="basket__delete">
+                                    <svg class="icon">
+                                        <use xlink:href="#garbage"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="basket__el">
+                            <div class="basket__el-info">
+                                <div class="basket__img" style="background-image:url('img/item-pizza-1.png')"></div>
+                                <div class="basket__name">
+                                    <a class="basket__name-text" href="#">Малибу 2</a>
+                                    <div class="basket__adds">
+                                        <div class="basket__adds-el">
+                                            <b>2x</b>соус тар-тар</div>
+                                        <div class="basket__adds-el">
+                                            <b>2x</b>соус тар-тар</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="basket__el-change">
+                                <div class="basket__inc">
+                                    <div class="elements-icr-block">
+                                        <div class="incr">
+                                            <div class="incr__minus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#minus"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="incr__val">
+                                                <span>1</span>
+                                                <div class="incr__val-coner"></div>
+                                            </div>
+                                            <div class="incr__plus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#plus"></use>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="basket__price">120 р.</div>
+                                <div class="basket__delete">
+                                    <svg class="icon">
+                                        <use xlink:href="#garbage"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="basket__el">
+                            <div class="basket__el-info">
+                                <div class="basket__img" style="background-image:url('img/item-pizza-1.png')"></div>
+                                <div class="basket__name">
+                                    <a class="basket__name-text" href="#">Малибу 3</a>
+                                    <div class="basket__adds">
+                                        <div class="basket__adds-el">
+                                            <b>2x</b>соус тар-тар</div>
+                                        <div class="basket__adds-el">
+                                            <b>2x</b>соус тар-тар</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="basket__el-change">
+                                <div class="basket__inc">
+                                    <div class="elements-icr-block">
+                                        <div class="incr">
+                                            <div class="incr__minus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#minus"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="incr__val">
+                                                <span>1</span>
+                                                <div class="incr__val-coner"></div>
+                                            </div>
+                                            <div class="incr__plus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#plus"></use>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="basket__price">120 р.</div>
+                                <div class="basket__delete">
+                                    <svg class="icon">
+                                        <use xlink:href="#garbage"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="basket__el">
+                            <div class="basket__el-info">
+                                <div class="basket__img" style="background-image:url('img/item-pizza-1.png')"></div>
+                                <div class="basket__name">
+                                    <a class="basket__name-text" href="#">Малибу 4</a>
+                                    <div class="basket__adds">
+                                        <div class="basket__adds-el">
+                                            <b>2x</b>соус тар-тар</div>
+                                        <div class="basket__adds-el">
+                                            <b>2x</b>соус тар-тар</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="basket__el-change">
+                                <div class="basket__inc">
+                                    <div class="elements-icr-block">
+                                        <div class="incr">
+                                            <div class="incr__minus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#minus"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="incr__val">
+                                                <span>1</span>
+                                                <div class="incr__val-coner"></div>
+                                            </div>
+                                            <div class="incr__plus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#plus"></use>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="basket__price">120 р.</div>
+                                <div class="basket__delete">
+                                    <svg class="icon">
+                                        <use xlink:href="#garbage"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="header__sub-arrow-down header__sub-arrow">
+                        <div class="header__sub-arrow-wrap">
+                            <svg class="icon">
+                                <use xlink:href="#arrow-down"></use>
+                            </svg>
+                        </div>
+                    </div>
+                    <!--basket-footer-->
+                    <div class="basket-footer">
+                        <div class="basket-total-text">Итого:</div>
+                        <div class="basket-total">
+                            <!--.basket-total-false 15 000 р.-->
+                            <div class="basket-total-true">12 000 р.</div>
+                        </div>
+                        <!--.basket-promo
+					.promo
+						input(type="text" placeholder="Промокод").promo-input
+						.promo-get
+							+icon("arrow-custom","icon")
+					-->
+                        <div class="basket-get">
+                            <a class="btn--md btn--light basket-clear js-basket-clear" href="#">Очистить</a>
+                            <a class="btn--md btn--yellow" href="#">Оформить</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--block header end-->
+    <div class="content">
+        <div class="main-cont">
+            <p>Чтобы вызвать нужное окно добавь на элемент класс .modal-get и data-modal="имя окна"</p>
+            <p>Чтобы добавить метод закрытия окна по клику на элемент добавиь класс .modal-send</p>
+            <div class="btn-wrap">
+                <div class="btn--md btn--mark modal-get" data-modal="registration">Регистрация | data-modal="registration"</div>
+                <br/>
+                <div class="btn--md btn--mark modal-get" data-modal="enter">Регистрация | data-modal="enter"</div>
+                <br/>
+                <div class="btn--md btn--mark modal-get" data-modal="town">Выберите город | data-modal="town"</div>
+                <br/>
+                <div class="btn--md btn--mark modal-get" data-modal="pass">Восстановление пароля | data-modal="pass"</div>
+                <br/>
+                <div class="btn--md btn--mark modal-get" data-modal="ingr">Добавить ингридиент | data-modal="ingr"</div>
+                <br/>
+                <div class="btn--md btn--mark modal-get" data-modal="TY">Заказ принят | data-modal="TY"</div>
+                <br/>
+                <div class="btn--md btn--mark modal-get" data-modal="location">Выбор города | data-modal="location"</div>
+                <br/>
+                <div class="btn--md btn--mark modal-get" data-modal="deliver">Выбор типа доставки | data-modal="deliver"</div>
+                <br/>
+                <div class="btn--md btn--mark modal-get" data-modal="disposal">Выбор адреса | data-modal="disposal"</div>
+                <br/>
+                <div class="btn--md btn--mark modal-get" data-modal="unworked">Ресторан не работает | data-modal="unworked"</div>
+                <br/>
+                <div class="btn--md btn--mark modal-get" data-modal="profile">Редактировать профиль | data-modal="profile"</div>
+                <br/>
+                <div class="btn--md btn--mark modal-get" data-modal="address">Редактировать Адрес | data-modal="address"</div>
+                <br/>
+                <div class="btn--md btn--mark modal-get" data-modal="review">Оставить отзыв | data-modal="review"</div>
+            </div>
+        </div>
+    </div>
+    <!--block footer-->
+    <div class="fix-soc">
+        <div class="soc-row">
+            <a class="soc-row__el" href="#">
+                <svg class="icon">
+                    <use xlink:href="#soc-vk"></use>
+                </svg>
+            </a>
+            <a class="soc-row__el" href="#">
+                <svg class="icon">
+                    <use xlink:href="#soc-facebook"></use>
+                </svg>
+            </a>
+            <a class="soc-row__el" href="#">
+                <svg class="icon">
+                    <use xlink:href="#soc-instagram"></use>
+                </svg>
+            </a>
+            <a class="soc-row__el" href="#">
+                <svg class="icon">
+                    <use xlink:href="#soc-twitter"></use>
+                </svg>
+            </a>
+            <a class="soc-row__el" href="#">
+                <svg class="icon">
+                    <use xlink:href="#soc-youtube"></use>
+                </svg>
+            </a>
+        </div>
+    </div>
+    <div class="footer-info-wrap">
+        <div class="main-cont">
+            <div class="footer-info">
+                <div class="footer-info__coll footer-info__coll-deliver">
+                    <div class="footer-info__title">Доставка за 60 минут</div>
+                    <div class="footer-info__text">Доставка производится ТОЛЬКО в пределах нашей зоны доставки.</div>
+                    <div class="footer-info__text">По другим адресам доставка НЕ ПРОИЗВОДИТСЯ.</div>
+                    <div class="footer-info__text">По предварительным заказам, оформленным к определенному времени, допускается отклонение плюс-минус 15-20 минут.</div>
+                    <div class="footer-info__text">Самовывоз с 11:00 до 23:00 по адресу ул.Московская, 198</div>
+                </div>
+                <div class="footer-info__coll">
+                    <div class="footer-info__title">Работаем с 10 до 23</div>
+                    <div class="footer-info__text">Без выходных</div>
+                </div>
+                <div class="footer-info__coll">
+                    <div class="footer-info__title">Бесплатная доставка</div>
+                    <div class="footer-info__text">При заказе от 500 руб</div>
+                </div>
+                <div class="footer-info__coll footer-info__map" style="background-image:url('img/map.jpg')">
+                    <div class="filter filter--yellow"></div>
+                    <div class="footer-info__map-icon">
+                        <svg class="icon">
+                            <use xlink:href="#compass"></use>
+                        </svg>
+                    </div>
+                    <div class="footer-info__map-text">Зона доставки</div>
+                </div>
+            </div>
+            <div class="footer-map-wrap">
+                <div class="footer-map">
+                    <!--pick map code her-->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-wrap">
+        <div class="main-cont">
+            <div class="footer">
+                <div class="footer-comp">
+                    <div class="footer-company">Cheez © 2019</div>
+                    <a href="#">Политика конфиденциальности</a>
+                    <a href="#">Публичная оферта</a>
+                    <div class="soc-row">
+                        <a class="soc-row__el" href="#">
+                            <svg class="icon">
+                                <use xlink:href="#soc-vk"></use>
+                            </svg>
+                        </a>
+                        <a class="soc-row__el" href="#">
+                            <svg class="icon">
+                                <use xlink:href="#soc-facebook"></use>
+                            </svg>
+                        </a>
+                        <a class="soc-row__el" href="#">
+                            <svg class="icon">
+                                <use xlink:href="#soc-instagram"></use>
+                            </svg>
+                        </a>
+                        <a class="soc-row__el" href="#">
+                            <svg class="icon">
+                                <use xlink:href="#soc-twitter"></use>
+                            </svg>
+                        </a>
+                        <a class="soc-row__el" href="#">
+                            <svg class="icon">
+                                <use xlink:href="#soc-youtube"></use>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-nav">
+                    <div class="footer-nav__list">
+                        <a class="footer-nav__el" href="#">Пицца</a>
+                        <a class="footer-nav__el" href="#">Гарниры</a>
+                        <a class="footer-nav__el" href="#">Акции</a>
+                        <a class="footer-nav__el" href="#">Суши</a>
+                        <a class="footer-nav__el" href="#">Горячие закуски</a>
+                        <a class="footer-nav__el" href="#">Оплата</a>
+                        <a class="footer-nav__el" href="#">Роллы</a>
+                        <a class="footer-nav__el" href="#">Напитки</a>
+                        <a class="footer-nav__el" href="#">О нас</a>
+                    </div>
+                </div>
+                <div class="footer-contact">
+                    <a class="footer-phone" href="tel:+7 385 257 17 76">+7 385 257 17 76</a>
+                    <a class="footer-mail" href="mailto:vkusno@pravilasushi.com">vkusno@pravilasushi.com</a>
+                    <div class="get-pay">
+                        <div class="get-pay__title">Мы принимаем:</div>
+                        <div class="pay-row">
+                            <div class="pay-row__el">
+                                <svg class="icon">
+                                    <use xlink:href="#mastercard--color"></use>
+                                </svg>
+                            </div>
+                            <div class="pay-row__el">
+                                <svg class="icon">
+                                    <use xlink:href="#visa"></use>
+                                </svg>
+                            </div>
+                            <div class="pay-row__el">
+                                <svg class="icon">
+                                    <use xlink:href="#paypal"></use>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <!---->
+                    <a class="create" href="/">
+                        <span>Разработка сайта:</span>
+                        <img src="img/jq.svg" alt="" />
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--block footer end-->
+    <!--block modal-->
+    <div class="modal-layer">
+        <div class="modal-cont">
+            <div class="modal-filter"></div>
+            <div class="modal-wrap">
+                <!--modal-registration-->
+                <div class="modal" data-modal="registration">
+                    <div class="modal-header">
+                        <div class="modal-close">
+                            <svg class="icon">
+                                <use xlink:href="#close"></use>
+                            </svg>
+                        </div>
+                        <div class="modal-title">Регистрация</div>
+                    </div>
+                    <div class="modal-content">
+                        <form action="#">
+                            <div class="input-cont">
+                                <div class="input-row">
+                                    <input class="input-animate" type="text" data-input="Ваше имя" />
+                                </div>
+                            </div>
+                            <div class="input-cont input-cont--half">
+                                <div class="input-row">
+                                    <input class="input-animate" type="text" data-input="Телефон" />
+                                </div>
+                                <div class="input-row">
+                                    <input class="input-animate" type="text" data-input="Email" />
+                                </div>
+                            </div>
+                            <div class="input-cont">
+                                <div class="input-row">
+                                    <input class="input-animate" type="password" data-input="Пароль" />
+                                </div>
+                            </div>
+                            <div class="input-cont">
+                                <div class="input-row">
+                                    <input class="input-animate" type="password" data-input="Повторите пароль" />
+                                </div>
+                            </div>
+                            <div class="login-remember">
+                                <div class="check-el">
+                                    <label class="style-label style-label--checkbox">
+                                        <input class="sytle-input" type="checkbox" />
+                                        <div class="sytle-input-element">
+                                            <svg class="icon-check">
+                                                <use xlink:href="#checked"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="sytle-input-text">Я ознакомился с
+                                            <a href="#">политикой конфиденциальности</a>,
+                                            <a href="#">публичной офертой</a>и даю согласие на обработку моих персональных данных</div>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="modal-get">
+                                <input class="btn--lg btn--yellow" type="submit" value="Зарегистрировать" />
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!--modal-registration-end-->
+                <!--modal-enter-->
+                <div class="modal" data-modal="enter">
+                    <div class="modal-header">
+                        <div class="modal-close">
+                            <svg class="icon">
+                                <use xlink:href="#close"></use>
+                            </svg>
+                        </div>
+                        <div class="modal-title">Авторизация</div>
+                    </div>
+                    <div class="modal-content">
+                        <form action="#">
+                            <div class="input-cont">
+                                <div class="input-row">
+                                    <input class="input-animate" type="text" data-input="Телефон" />
+                                </div>
+                            </div>
+                            <div class="input-cont">
+                                <div class="input-row">
+                                    <input class="input-animate" type="password" data-input="Пароль" />
+                                </div>
+                            </div>
+                            <div class="modal-foget">
+                                <div class="link--blue show-modal" data-modal="pass">Забыли пароль ?</div>
+                            </div>
+                            <div class="modal-get">
+                                <input class="btn--lg btn--yellow" type="submit" value="Войти" />
+                            </div>
+                            <div class="modal-account">
+                                <div class="link--text modal-get" data-modal="registration">Нет аккаунта? зарегистрироваться</div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!--modal-enter-end-->
+                <!--modal-town-->
+                <div class="modal" data-modal="town">
+                    <div class="modal-header">
+                        <div class="modal-close">
+                            <svg class="icon">
+                                <use xlink:href="#close"></use>
+                            </svg>
+                        </div>
+                        <div class="modal-title">Выберите город</div>
+                    </div>
+                    <div class="modal-content modal-content--town">
+                        <div class="modal-town">
+                            <div class="modal-town__el toggle-close-modal">Москва</div>
+                            <div class="modal-town__el toggle-close-modal">Санкт-Петербург</div>
+                        </div>
+                    </div>
+                </div>
+                <!--modal-town-end-->
+                <!--modal-pass-->
+                <div class="modal" data-modal="pass">
+                    <div class="modal-header">
+                        <div class="modal-close">
+                            <svg class="icon">
+                                <use xlink:href="#close"></use>
+                            </svg>
+                        </div>
+                        <div class="modal-title">Восстановление пароля</div>
+                    </div>
+                    <div class="modal-content">
+                        <form action="#">
+                            <div class="input-cont">
+                                <div class="input-row">
+                                    <input class="input-animate" type="text" data-input="Телефон" />
+                                </div>
+                            </div>
+                            <div class="modal-get">
+                                <input class="btn--lg btn--yellow" type="submit" value="Восстановить" />
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!--modal-pass-end-->
+                <!--ingr-->
+                <div class="modal modal--lg" data-modal="ingr">
+                    <div class="modal-content">
+                        <div class="modal-close">
+                            <svg class="icon">
+                                <use xlink:href="#close-fat"></use>
+                            </svg>
+                        </div>
+                        <div class="modal-title modal-title--lg">Добавь любой ингредиент к пицце на свой вкус</div>
+                        <div class="modal-title-add">Добавить можно не более 6 ингредиентов, иначе пицца не пропечется.</div>
+                        <div class="add-ingr-row">
+                            <div class="add-ingr__list">
+                                <div class="add-ingr__el">
+                                    <div class="incr__minus incr__nav incr--one">
+                                        <svg class="icon">
+                                            <use xlink:href="#minus"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="incr__val">
+                                        <span>1</span>
+                                        <div class="incr__val-count">шт.</div>
+                                    </div>
+                                    <!--.add-ingr__el-img(style="background-image:url('img/snack.jpg')")-->
+                                    <div class="add-ingr__el-name">Тартар</div>
+                                    <div class="add-ingr__el-weight">50г</div>
+                                    <div class="add-ingr__el-price">30р</div>
+                                    <div class="incr__plus incr__nav">
+                                        <svg class="icon">
+                                            <use xlink:href="#plus"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="add-ingr__el">
+                                    <div class="incr__minus incr__nav incr--one">
+                                        <svg class="icon">
+                                            <use xlink:href="#minus"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="incr__val">
+                                        <span>1</span>
+                                        <div class="incr__val-count">шт.</div>
+                                    </div>
+                                    <!--.add-ingr__el-img(style="background-image:url('img/snack.jpg')")-->
+                                    <div class="add-ingr__el-name">Тартар</div>
+                                    <div class="add-ingr__el-weight">50г</div>
+                                    <div class="add-ingr__el-price">30р</div>
+                                    <div class="incr__plus incr__nav">
+                                        <svg class="icon">
+                                            <use xlink:href="#plus"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="add-ingr__el">
+                                    <div class="incr__minus incr__nav incr--one">
+                                        <svg class="icon">
+                                            <use xlink:href="#minus"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="incr__val">
+                                        <span>1</span>
+                                        <div class="incr__val-count">шт.</div>
+                                    </div>
+                                    <!--.add-ingr__el-img(style="background-image:url('img/snack.jpg')")-->
+                                    <div class="add-ingr__el-name">Тартар</div>
+                                    <div class="add-ingr__el-weight">50г</div>
+                                    <div class="add-ingr__el-price">30р</div>
+                                    <div class="incr__plus incr__nav">
+                                        <svg class="icon">
+                                            <use xlink:href="#plus"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="add-ingr__el">
+                                    <div class="incr__minus incr__nav incr--one">
+                                        <svg class="icon">
+                                            <use xlink:href="#minus"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="incr__val">
+                                        <span>1</span>
+                                        <div class="incr__val-count">шт.</div>
+                                    </div>
+                                    <!--.add-ingr__el-img(style="background-image:url('img/snack.jpg')")-->
+                                    <div class="add-ingr__el-name">Тартар</div>
+                                    <div class="add-ingr__el-weight">50г</div>
+                                    <div class="add-ingr__el-price">30р</div>
+                                    <div class="incr__plus incr__nav">
+                                        <svg class="icon">
+                                            <use xlink:href="#plus"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="add-ingr__el">
+                                    <div class="incr__minus incr__nav incr--one">
+                                        <svg class="icon">
+                                            <use xlink:href="#minus"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="incr__val">
+                                        <span>1</span>
+                                        <div class="incr__val-count">шт.</div>
+                                    </div>
+                                    <!--.add-ingr__el-img(style="background-image:url('img/snack.jpg')")-->
+                                    <div class="add-ingr__el-name">Тартар</div>
+                                    <div class="add-ingr__el-weight">50г</div>
+                                    <div class="add-ingr__el-price">30р</div>
+                                    <div class="incr__plus incr__nav">
+                                        <svg class="icon">
+                                            <use xlink:href="#plus"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="add-ingr__el">
+                                    <div class="incr__minus incr__nav incr--one">
+                                        <svg class="icon">
+                                            <use xlink:href="#minus"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="incr__val">
+                                        <span>1</span>
+                                        <div class="incr__val-count">шт.</div>
+                                    </div>
+                                    <!--.add-ingr__el-img(style="background-image:url('img/snack.jpg')")-->
+                                    <div class="add-ingr__el-name">Тартар</div>
+                                    <div class="add-ingr__el-weight">50г</div>
+                                    <div class="add-ingr__el-price">30р</div>
+                                    <div class="incr__plus incr__nav">
+                                        <svg class="icon">
+                                            <use xlink:href="#plus"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="add-ingr__el">
+                                    <div class="incr__minus incr__nav incr--one">
+                                        <svg class="icon">
+                                            <use xlink:href="#minus"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="incr__val">
+                                        <span>1</span>
+                                        <div class="incr__val-count">шт.</div>
+                                    </div>
+                                    <!--.add-ingr__el-img(style="background-image:url('img/snack.jpg')")-->
+                                    <div class="add-ingr__el-name">Тартар</div>
+                                    <div class="add-ingr__el-weight">50г</div>
+                                    <div class="add-ingr__el-price">30р</div>
+                                    <div class="incr__plus incr__nav">
+                                        <svg class="icon">
+                                            <use xlink:href="#plus"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="add-ingr__el">
+                                    <div class="incr__minus incr__nav incr--one">
+                                        <svg class="icon">
+                                            <use xlink:href="#minus"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="incr__val">
+                                        <span>1</span>
+                                        <div class="incr__val-count">шт.</div>
+                                    </div>
+                                    <!--.add-ingr__el-img(style="background-image:url('img/snack.jpg')")-->
+                                    <div class="add-ingr__el-name">Тартар</div>
+                                    <div class="add-ingr__el-weight">50г</div>
+                                    <div class="add-ingr__el-price">30р</div>
+                                    <div class="incr__plus incr__nav">
+                                        <svg class="icon">
+                                            <use xlink:href="#plus"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="add-ingr__el">
+                                    <div class="incr__minus incr__nav incr--one">
+                                        <svg class="icon">
+                                            <use xlink:href="#minus"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="incr__val">
+                                        <span>1</span>
+                                        <div class="incr__val-count">шт.</div>
+                                    </div>
+                                    <!--.add-ingr__el-img(style="background-image:url('img/snack.jpg')")-->
+                                    <div class="add-ingr__el-name">Тартар</div>
+                                    <div class="add-ingr__el-weight">50г</div>
+                                    <div class="add-ingr__el-price">30р</div>
+                                    <div class="incr__plus incr__nav">
+                                        <svg class="icon">
+                                            <use xlink:href="#plus"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="add-ingr__el">
+                                    <div class="incr__minus incr__nav incr--one">
+                                        <svg class="icon">
+                                            <use xlink:href="#minus"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="incr__val">
+                                        <span>1</span>
+                                        <div class="incr__val-count">шт.</div>
+                                    </div>
+                                    <!--.add-ingr__el-img(style="background-image:url('img/snack.jpg')")-->
+                                    <div class="add-ingr__el-name">Тартар</div>
+                                    <div class="add-ingr__el-weight">50г</div>
+                                    <div class="add-ingr__el-price">30р</div>
+                                    <div class="incr__plus incr__nav">
+                                        <svg class="icon">
+                                            <use xlink:href="#plus"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="add-ingr__el">
+                                    <div class="incr__minus incr__nav incr--one">
+                                        <svg class="icon">
+                                            <use xlink:href="#minus"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="incr__val">
+                                        <span>1</span>
+                                        <div class="incr__val-count">шт.</div>
+                                    </div>
+                                    <!--.add-ingr__el-img(style="background-image:url('img/snack.jpg')")-->
+                                    <div class="add-ingr__el-name">Тартар</div>
+                                    <div class="add-ingr__el-weight">50г</div>
+                                    <div class="add-ingr__el-price">30р</div>
+                                    <div class="incr__plus incr__nav">
+                                        <svg class="icon">
+                                            <use xlink:href="#plus"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="add-ingr__el">
+                                    <div class="incr__minus incr__nav incr--one">
+                                        <svg class="icon">
+                                            <use xlink:href="#minus"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="incr__val">
+                                        <span>1</span>
+                                        <div class="incr__val-count">шт.</div>
+                                    </div>
+                                    <!--.add-ingr__el-img(style="background-image:url('img/snack.jpg')")-->
+                                    <div class="add-ingr__el-name">Тартар</div>
+                                    <div class="add-ingr__el-weight">50г</div>
+                                    <div class="add-ingr__el-price">30р</div>
+                                    <div class="incr__plus incr__nav">
+                                        <svg class="icon">
+                                            <use xlink:href="#plus"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="add-ingr__el">
+                                    <div class="incr__minus incr__nav incr--one">
+                                        <svg class="icon">
+                                            <use xlink:href="#minus"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="incr__val">
+                                        <span>1</span>
+                                        <div class="incr__val-count">шт.</div>
+                                    </div>
+                                    <!--.add-ingr__el-img(style="background-image:url('img/snack.jpg')")-->
+                                    <div class="add-ingr__el-name">Тартар</div>
+                                    <div class="add-ingr__el-weight">50г</div>
+                                    <div class="add-ingr__el-price">30р</div>
+                                    <div class="incr__plus incr__nav">
+                                        <svg class="icon">
+                                            <use xlink:href="#plus"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="add-ingr__el">
+                                    <div class="incr__minus incr__nav incr--one">
+                                        <svg class="icon">
+                                            <use xlink:href="#minus"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="incr__val">
+                                        <span>1</span>
+                                        <div class="incr__val-count">шт.</div>
+                                    </div>
+                                    <!--.add-ingr__el-img(style="background-image:url('img/snack.jpg')")-->
+                                    <div class="add-ingr__el-name">Тартар</div>
+                                    <div class="add-ingr__el-weight">50г</div>
+                                    <div class="add-ingr__el-price">30р</div>
+                                    <div class="incr__plus incr__nav">
+                                        <svg class="icon">
+                                            <use xlink:href="#plus"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="add-ingr__el">
+                                    <div class="incr__minus incr__nav incr--one">
+                                        <svg class="icon">
+                                            <use xlink:href="#minus"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="incr__val">
+                                        <span>1</span>
+                                        <div class="incr__val-count">шт.</div>
+                                    </div>
+                                    <!--.add-ingr__el-img(style="background-image:url('img/snack.jpg')")-->
+                                    <div class="add-ingr__el-name">Тартар</div>
+                                    <div class="add-ingr__el-weight">50г</div>
+                                    <div class="add-ingr__el-price">30р</div>
+                                    <div class="incr__plus incr__nav">
+                                        <svg class="icon">
+                                            <use xlink:href="#plus"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="add-ingr__el">
+                                    <div class="incr__minus incr__nav incr--one">
+                                        <svg class="icon">
+                                            <use xlink:href="#minus"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="incr__val">
+                                        <span>1</span>
+                                        <div class="incr__val-count">шт.</div>
+                                    </div>
+                                    <!--.add-ingr__el-img(style="background-image:url('img/snack.jpg')")-->
+                                    <div class="add-ingr__el-name">Тартар</div>
+                                    <div class="add-ingr__el-weight">50г</div>
+                                    <div class="add-ingr__el-price">30р</div>
+                                    <div class="incr__plus incr__nav">
+                                        <svg class="icon">
+                                            <use xlink:href="#plus"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="add-ingr__el">
+                                    <div class="incr__minus incr__nav incr--one">
+                                        <svg class="icon">
+                                            <use xlink:href="#minus"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="incr__val">
+                                        <span>1</span>
+                                        <div class="incr__val-count">шт.</div>
+                                    </div>
+                                    <!--.add-ingr__el-img(style="background-image:url('img/snack.jpg')")-->
+                                    <div class="add-ingr__el-name">Тартар</div>
+                                    <div class="add-ingr__el-weight">50г</div>
+                                    <div class="add-ingr__el-price">30р</div>
+                                    <div class="incr__plus incr__nav">
+                                        <svg class="icon">
+                                            <use xlink:href="#plus"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="add-ingr__el">
+                                    <div class="incr__minus incr__nav incr--one">
+                                        <svg class="icon">
+                                            <use xlink:href="#minus"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="incr__val">
+                                        <span>1</span>
+                                        <div class="incr__val-count">шт.</div>
+                                    </div>
+                                    <!--.add-ingr__el-img(style="background-image:url('img/snack.jpg')")-->
+                                    <div class="add-ingr__el-name">Тартар</div>
+                                    <div class="add-ingr__el-weight">50г</div>
+                                    <div class="add-ingr__el-price">30р</div>
+                                    <div class="incr__plus incr__nav">
+                                        <svg class="icon">
+                                            <use xlink:href="#plus"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="add-ingr__el">
+                                    <div class="incr__minus incr__nav incr--one">
+                                        <svg class="icon">
+                                            <use xlink:href="#minus"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="incr__val">
+                                        <span>1</span>
+                                        <div class="incr__val-count">шт.</div>
+                                    </div>
+                                    <!--.add-ingr__el-img(style="background-image:url('img/snack.jpg')")-->
+                                    <div class="add-ingr__el-name">Тартар</div>
+                                    <div class="add-ingr__el-weight">50г</div>
+                                    <div class="add-ingr__el-price">30р</div>
+                                    <div class="incr__plus incr__nav">
+                                        <svg class="icon">
+                                            <use xlink:href="#plus"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="add-ingr__el">
+                                    <div class="incr__minus incr__nav incr--one">
+                                        <svg class="icon">
+                                            <use xlink:href="#minus"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="incr__val">
+                                        <span>1</span>
+                                        <div class="incr__val-count">шт.</div>
+                                    </div>
+                                    <!--.add-ingr__el-img(style="background-image:url('img/snack.jpg')")-->
+                                    <div class="add-ingr__el-name">Тартар</div>
+                                    <div class="add-ingr__el-weight">50г</div>
+                                    <div class="add-ingr__el-price">30р</div>
+                                    <div class="incr__plus incr__nav">
+                                        <svg class="icon">
+                                            <use xlink:href="#plus"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="add-ingr-footer">
+                            <div class="add-ingr-cost">
+                                <div class="add-ingr-cost__text">Сумма:</div>
+                                <div class="add-ingr-cost__val">1598р</div>
+                                <div class="add-ingr-item">у вас 2 ингридиента</div>
+                            </div>
+                            <div class="add-ingr-clear">Cбросить выбор</div>
+                            <div class="add-ingr-get">Cохранить</div>
+                        </div>
+                    </div>
+                </div>
+                <!--ingr === end-->
+                <!--TY message-->
+                <div class="modal modal--md" data-modal="TY">
+                    <div class="modal-header">
+                        <div class="modal-close">
+                            <svg class="icon">
+                                <use xlink:href="#close"></use>
+                            </svg>
+                        </div>
+                        <div class="modal-title">Спасибо!
+                            <br>Ваш заказ принят</div>
+                    </div>
+                    <div class="modal-content">
+                        <div class="modal-text">Наши менеджеры свяжутся с вами в ближайшее время для подтверждения заказа</div>
+                        <a class="btn--md btn--light btn--full" href="/">На главную</a>
+                    </div>
+                </div>
+                <!--TY message === end-->
+                <!--location message-->
+                <div class="modal modal--md" data-modal="location">
+                    <div class="modal-header">
+                        <div class="modal-close">
+                            <svg class="icon">
+                                <use xlink:href="#close"></use>
+                            </svg>
+                        </div>
+                        <div class="modal-title">Выберите
+                            <br>ваш город!</div>
+                    </div>
+                    <div class="modal-content">
+                        <div class="position-list scroll">
+                            <a class="position-list__el" href="#">Москва</a>
+                            <a class="position-list__el" href="#">Волгоград</a>
+                            <a class="position-list__el" href="#">Уфа</a>
+                            <a class="position-list__el" href="#">Казань</a>
+                            <a class="position-list__el" href="#">Владивосток</a>
+                            <a class="position-list__el" href="#">Москва</a>
+                            <a class="position-list__el" href="#">Волгоград</a>
+                            <a class="position-list__el" href="#">Уфа</a>
+                            <a class="position-list__el" href="#">Казань</a>
+                            <a class="position-list__el" href="#">Владивосток</a>
+                            <a class="position-list__el" href="#">Москва</a>
+                            <a class="position-list__el" href="#">Волгоград</a>
+                            <a class="position-list__el" href="#">Уфа</a>
+                            <a class="position-list__el" href="#">Казань</a>
+                            <a class="position-list__el" href="#">Владивосток</a>
+                            <a class="position-list__el" href="#">Москва</a>
+                            <a class="position-list__el" href="#">Волгоград</a>
+                            <a class="position-list__el" href="#">Уфа</a>
+                            <a class="position-list__el" href="#">Казань</a>
+                            <a class="position-list__el" href="#">Владивосток</a>
+                        </div>
+                    </div>
+                </div>
+                <!--location message === end-->
+                <!--deliver message-->
+                <div class="modal modal--md" data-modal="deliver">
+                    <div class="modal-header">
+                        <div class="modal-close">
+                            <svg class="icon">
+                                <use xlink:href="#close"></use>
+                            </svg>
+                        </div>
+                        <div class="modal-title">Выберите тип доставки</div>
+                    </div>
+                    <div class="modal-content">
+                        <div class="btn--md btn--light btn--full hide-modal">Доставка</div>
+                        <br/>
+                        <div class="btn--md btn--light btn--full hide-modal">Самовывоз</div>
+                    </div>
+                </div>
+                <!--deliver message === end-->
+                <!--address message-->
+                <div class="modal modal--md" data-modal="disposal">
+                    <div class="modal-header">
+                        <div class="modal-close">
+                            <svg class="icon">
+                                <use xlink:href="#close"></use>
+                            </svg>
+                        </div>
+                        <div class="modal-title">Ваш адрес доставки</div>
+                    </div>
+                    <div class="modal-content">
+                        <form class="login-form" action="#">
+                            <div class="input-cont">
+                                <div class="input-row">
+                                    <input class="input-animate" type="text" data-input="Ваша улица" />
+                                </div>
+                            </div>
+                            <div class="input-cont">
+                                <div class="input-row">
+                                    <input class="input-animate" type="text" data-input="Ваш дом" />
+                                </div>
+                            </div>
+                            <!--toggle class hidden for msg-->
+                        </form>
+                        <div class="btn--md btn--mark btn--full hide-modal">Подтвердить</div>
+                        <p class="type--center">или</p>
+                        <div class="btn--md btn--light btn--full hide-modal">Выбрать самовывоз</div>
+                    </div>
+                </div>
+                <!--address message === end-->
+                <!--unworked message-->
+                <div class="modal modal--md" data-modal="unworked">
+                    <div class="modal-header">
+                        <div class="modal-close">
+                            <svg class="icon">
+                                <use xlink:href="#close"></use>
+                            </svg>
+                        </div>
+                        <div class="modal-title">Ресторан не работает :(</div>
+                    </div>
+                    <div class="modal-content">
+                        <div class="unworked-text">Рестораны доставки в г. Москва работают с 10 до 22:30</div>
+                        <div class="btn--md btn--light btn--full hide-modal">Хорошо</div>
+                    </div>
+                </div>
+                <!--unworked message === end-->
+                <!--profile message-->
+                <div class="modal" data-modal="profile">
+                    <div class="modal-header">
+                        <div class="modal-close">
+                            <svg class="icon">
+                                <use xlink:href="#close"></use>
+                            </svg>
+                        </div>
+                        <div class="modal-title">Профиль</div>
+                    </div>
+                    <div class="modal-content">
+                        <form action="#">
+                            <div class="input-cont">
+                                <div class="input-row">
+                                    <input class="input-animate" type="text" data-input="Фамилия" />
+                                </div>
+                            </div>
+                            <div class="input-cont">
+                                <div class="input-row">
+                                    <input class="input-animate" type="text" data-input="Имя" />
+                                </div>
+                            </div>
+                            <div class="input-cont">
+                                <div class="input-row">
+                                    <input class="input-animate" type="text" data-input="Телефон" />
+                                </div>
+                            </div>
+                            <div class="input-cont">
+                                <div class="input-row">
+                                    <input class="input-animate" type="text" data-input="Дата рождения" />
+                                </div>
+                            </div>
+                            <div class="input-cont">
+                                <div class="input-row">
+                                    <input class="input-animate" type="text" data-input="Ваша почта" />
+                                </div>
+                            </div>
+                            <div class="btn--md btn--light btn--full">Отправить</div>
+                        </form>
+                    </div>
+                </div>
+                <!--profile message === end-->
+                <!--address message-->
+                <div class="modal modal--md" data-modal="address">
+                    <div class="modal-header">
+                        <div class="modal-close">
+                            <svg class="icon">
+                                <use xlink:href="#close"></use>
+                            </svg>
+                        </div>
+                        <div class="modal-title">Ваш адрес доставки</div>
+                    </div>
+                    <div class="modal-content">
+                        <form action="#">
+                            <div class="input-cont">
+                                <div class="input-row">
+                                    <input class="input-animate" type="text" data-input="Название адреса (дом, работа)" />
+                                </div>
+                            </div>
+                            <div class="input-cont">
+                                <div class="input-row">
+                                    <input class="input-animate" type="text" data-input="Улица" />
+                                </div>
+                            </div>
+                            <div class="input-cont">
+                                <div class="input-row">
+                                    <select class="select-beauty">
+                                        <option>Адрес 1</option>
+                                        <option>Адрес 2</option>
+                                        <option>Адрес 3</option>
+                                        <option>Адрес 4</option>
+                                        <option>Адрес 5</option>
+                                        <option>Адрес 6</option>
+                                        <option>Адрес 7</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="input-cont input-cont--half">
+                                <div class="input-row">
+                                    <input class="input-animate" type="text" data-input="Квартира" />
+                                </div>
+                                <div class="input-row">
+                                    <input class="input-animate" type="text" data-input="Подъезд" />
+                                </div>
+                            </div>
+                            <div class="input-cont input-cont--half">
+                                <div class="input-row">
+                                    <input class="input-animate" type="text" data-input="Этаж" />
+                                </div>
+                                <div class="input-row">
+                                    <input class="input-animate" type="text" data-input="Домофон" />
+                                </div>
+                            </div>
+                        </form>
+                        <div class="btn--md btn--light btn--full">Отправить</div>
+                    </div>
+                </div>
+                <!--address message === end-->
+                <!--review-->
+                <div class="modal modal--md" data-modal="review">
+                    <div class="modal-content">
+                        <div class="modal-close">
+                            <svg class="icon">
+                                <use xlink:href="#close-fat"></use>
+                            </svg>
+                        </div>
+                        <div class="modal-title modal-title--lg">Оставить отзыв</div>
+                        <div class="modal-text">Вам понравились Правила Суши?
+                            <br>Жми лайк!</div>
+                        <div class="like-row">
+                            <div class="like-el like-el--true">
+                                <svg class="icon">
+                                    <use xlink:href="#like"></use>
+                                </svg>
+                            </div>
+                            <div class="like-el like-el--false">
+                                <svg class="icon">
+                                    <use xlink:href="#unlike"></use>
+                                </svg>
+                            </div>
+                        </div>
+                        <form action="#">
+                            <div class="input-cont">
+                                <div class="input-row">
+                                    <input class="input-animate" type="text" name="name" data-input="Имя" />
+                                </div>
+                            </div>
+                            <div class="input-cont">
+                                <div class="input-row">
+                                    <input class="input-animate" type="text" name="phone" data-input="Телефон" />
+                                </div>
+                            </div>
+                            <div class="input-cont">
+                                <div class="input-row">
+                                    <input class="input-animate" type="text" name="mail" data-input="Почта" />
+                                </div>
+                            </div>
+                            <div class="input-cont">
+                                <div class="input-row">
+                                    <textarea class="input-animate" name="text" cols="30" rows="6" data-input="Cообщение"></textarea>
+                                </div>
+                            </div>
+                            <input class="btn--md btn--mark btn--full" type="submit" value="Отправить" />
+                        </form>
+                    </div>
+                </div>
+                <!--review === end-->
+            </div>
+        </div>
+    </div>
+    <!--block modal end-->
+    <script src="js/combined.js"></script>
+    <script src="js/add-on.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/script-edit.js"></script>
+</body>
+
+</html>

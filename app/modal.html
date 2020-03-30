@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="bower/slick-carousel/slick/slick-theme.css" />
     <link rel="stylesheet" href="bower/jquery-nice-select/css/nice-select.css" />
     <link rel="stylesheet" href="bower/air-datepicker/dist/css/datepicker.css" />
+    <link rel="stylesheet" href="bower/perfect-scrollbar/css/perfect-scrollbar.css" />
     <!--endbuild-->
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/style-edit.css" />
@@ -437,6 +438,8 @@
                 <div class="btn--md btn--mark modal-get" data-modal="profile">Редактировать профиль | data-modal="profile"</div>
                 <br/>
                 <div class="btn--md btn--mark modal-get" data-modal="address">Редактировать Адрес | data-modal="address"</div>
+                <br/>
+                <div class="btn--md btn--mark modal-get" data-modal="review">Оставить отзыв | data-modal="review"</div>
             </div>
         </div>
     </div>
@@ -1180,7 +1183,7 @@
                             <br>ваш город!</div>
                     </div>
                     <div class="modal-content">
-                        <div class="position-list nice-scroll">
+                        <div class="position-list scroll">
                             <a class="position-list__el" href="#">Москва</a>
                             <a class="position-list__el" href="#">Волгоград</a>
                             <a class="position-list__el" href="#">Уфа</a>
@@ -1366,6 +1369,55 @@
                     </div>
                 </div>
                 <!--address message === end-->
+                <!--review-->
+                <div class="modal modal--md" data-modal="review">
+                    <div class="modal-content">
+                        <div class="modal-close">
+                            <svg class="icon">
+                                <use xlink:href="#close-fat"></use>
+                            </svg>
+                        </div>
+                        <div class="modal-title modal-title--lg">Оставить отзыв</div>
+                        <div class="modal-text">Вам понравились Правила Суши?
+                            <br>Жми лайк!</div>
+                        <div class="like-row">
+                            <div class="like-el like-el--true">
+                                <svg class="icon">
+                                    <use xlink:href="#like"></use>
+                                </svg>
+                            </div>
+                            <div class="like-el like-el--false">
+                                <svg class="icon">
+                                    <use xlink:href="#unlike"></use>
+                                </svg>
+                            </div>
+                        </div>
+                        <form action="#">
+                            <div class="input-cont">
+                                <div class="input-row">
+                                    <input class="input-animate" type="text" name="name" data-input="Имя" />
+                                </div>
+                            </div>
+                            <div class="input-cont">
+                                <div class="input-row">
+                                    <input class="input-animate" type="text" name="phone" data-input="Телефон" />
+                                </div>
+                            </div>
+                            <div class="input-cont">
+                                <div class="input-row">
+                                    <input class="input-animate" type="text" name="mail" data-input="Почта" />
+                                </div>
+                            </div>
+                            <div class="input-cont">
+                                <div class="input-row">
+                                    <textarea class="input-animate" name="text" cols="30" rows="6" data-input="Cообщение"></textarea>
+                                </div>
+                            </div>
+                            <input class="btn--md btn--mark btn--full" type="submit" value="Отправить" />
+                        </form>
+                    </div>
+                </div>
+                <!--review === end-->
             </div>
         </div>
     </div>
@@ -1374,8 +1426,8 @@
     <script src="bower/jquery/dist/jquery.js"></script>
     <script src="bower/slick-carousel/slick/slick.js"></script>
     <script src="bower/jquery-nice-select/js/jquery.nice-select.min.js"></script>
-    <script src="bower/jquery.nicescroll/dist/jquery.nicescroll.min.js"></script>
     <script src="bower/air-datepicker/dist/js/datepicker.js"></script>
+    <script src="bower/perfect-scrollbar/js/perfect-scrollbar.jquery.js"></script>
     <!-- endbuild-->
     <script src="js/add-on.js"></script>
     <script src="js/script.js"></script>

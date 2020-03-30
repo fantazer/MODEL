@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html>
+<!--create by ANATOLY KUZNETSOV-->
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="format-detection" content="telephone=no" />
+    <!--colors-tabs-->
+    <meta name="theme-color" content="#000" />
+    <meta name="msapplication-navbutton-color" content="#000" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="#000" />
+    <!--SEO-->
+    <title>Document</title>
+    <meta name="description" itemprop="description" content="" />
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/style-edit.css" />
+</head>
+
+<body>
+    <div class="page">
+        <!--block header-->
+        <div class="header">
+            <!--header-top-->
+            <div class="header-top-wrap">
+                <div class="main-cont">
+                    <div class="header-top">
+                        <div class="head-toggle">
+                            <svg class="icon icon-open">
+                                <use xlink:href="#menu"></use>
+                            </svg>
+                            <svg class="icon icon-close">
+                                <use xlink:href="#close"></use>
+                            </svg>
+                        </div>
+                        <a class="logo" href="/">
+                            <img src="img/logo.svg" alt="" />
+                        </a>
+                        <div class="header-location">
+                            <div class="header-info">
+                                <div class="header-info__icon">
+                                    <svg class="icon">
+                                        <use xlink:href="#location"></use>
+                                    </svg>
+                                </div>
+                                <div class="header-info__val">Санкт-Петербург</div>
+                            </div>
+                            <div class="header-info__text">Доставка за 45-90 минут</div>
+                        </div>
+                        <div class="header-contact">
+                            <div class="header-info">
+                                <div class="header-info__icon">
+                                    <svg class="icon">
+                                        <use xlink:href="#phone"></use>
+                                    </svg>
+                                </div>
+                                <div class="header-info__val">
+                                    <a href="tel:+7 (7172) 767 767">+7 (7172) 767 767</a>
+                                    <span class="divider">|</span>
+                                    <a href="tel:+7 (707) 988 78 87">+7 (707) 988 78 87</a>
+                                </div>
+                            </div>
+                            <div class="header-info__text">Сегодня 10 - 24</div>
+                        </div>
+                        <a class="header-auth header-auth--true" href="#">
+                            <!-- toggle .header-auth--true-->
+                            <svg class="icon">
+                                <use xlink:href="#user"></use>
+                            </svg>
+                            <div class="header-auth-state--true">
+                                <span>Войти</span>
+                            </div>
+                            <div class="header-auth-state--false">
+                                <span>Александр</span>
+                                <div class="header-auth__bonus">
+                                    <span>356 Б</span>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="cart-wrap cart-wrap--mobile">
+                            <div class="cart">
+                                <svg class="icon icon--close">
+                                    <use xlink:href="#close"></use>
+                                </svg>
+                                <svg class="icon icon--open">
+                                    <use xlink:href="#cart"></use>
+                                </svg>
+                                <div class="cart-val">33</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-menu">
+                <div class="slide-row">
+                    <div class="slide-header-auth">
+                        <!-- toggle .slide-header-auth--true-->
+                        <svg class="icon">
+                            <use xlink:href="#user"></use>
+                        </svg>
+                        <div class="slide-header-auth-state--true">
+                            <span>Войти</span>
+                        </div>
+                        <div class="slide-header-auth-state--false">
+                            <span>Александр</span>
+                            <div class="slide-header-auth__bonus">
+                                <span>356 Б</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide-row">
+                    <div class="slide-menu__list">
+                        <a class="slide-menu__list-el" href="#">Акции</a>
+                        <a class="slide-menu__list-el" href="#">Доставка</a>
+                        <a class="slide-menu__list-el" href="#">О нас</a>
+                    </div>
+                </div>
+                <div class="slide-row">
+                    <div class="slide-header-location">
+                        <div class="slide-header-info">
+                            <div class="slide-header-info__icon">
+                                <svg class="icon">
+                                    <use xlink:href="#location"></use>
+                                </svg>
+                            </div>
+                            <div class="slide-header-info__val">Санкт-Петербург</div>
+                        </div>
+                        <div class="slide-header-info__text">Доставка за 45-90 минут</div>
+                    </div>
+                </div>
+                <div class="slide-row">
+                    <div class="slide-header-contact">
+                        <div class="slide-header-info">
+                            <div class="slide-header-info__icon">
+                                <svg class="icon">
+                                    <use xlink:href="#phone"></use>
+                                </svg>
+                            </div>
+                            <div class="slide-header-info__val">
+                                <a href="tel:+7 (7172) 767 767">+7 (7172) 767 767</a>
+                            </div>
+                        </div>
+                        <div class="slide-header-info__text">Сегодня 10 - 24</div>
+                    </div>
+                </div>
+            </div>
+            <div class="header-menu-wrap">
+                <div class="main-cont">
+                    <div class="header-menu">
+                        <a class="logo" href="/">
+                            <img src="img/logo.svg" alt="" />
+                        </a>
+                        <div class="header-nav">
+                            <a class="header-nav__el" href="#">Пицца</a>
+                            <a class="header-nav__el" href="#">Суши</a>
+                            <a class="header-nav__el" href="#">Закуски</a>
+                            <a class="header-nav__el" href="#">Гарниры</a>
+                            <a class="header-nav__el" href="#">Комбо</a>
+                            <a class="header-nav__el" href="#">Напитки</a>
+                        </div>
+                        <div class="header-nav header-nav--add">
+                            <a class="header-nav__el" href="#">Акции</a>
+                            <a class="header-nav__el" href="#">Доставка</a>
+                            <a class="header-nav__el" href="#">О нас</a>
+                        </div>
+                        <div class="cart-wrap cart-wrap--desctop">
+                            <div class="cart-cost">2 850 ₽</div>
+                            <div class="cart">
+                                <svg class="icon icon--close">
+                                    <use xlink:href="#close"></use>
+                                </svg>
+                                <svg class="icon icon--open">
+                                    <use xlink:href="#cart"></use>
+                                </svg>
+                                <div class="cart-val">33</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="basket-wrap">
+                <div class="main-cont">
+                    <div class="basket">
+                        <div class="basket-wrap-coner"></div>
+                        <div class="basket-empty">
+                            <div class="basket-empty__title">Ваша корзина пуста.</div>
+                            <div class="basket-empty__text">Добавь интересующие товары из меню сайта</div>
+                        </div>
+                        <div class="header__sub-arrow-up header__sub-arrow">
+                            <div class="header__sub-arrow-wrap">
+                                <svg class="icon">
+                                    <use xlink:href="#arrow-up"></use>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="basket-container">
+                            <div class="basket__el">
+                                <div class="basket__el-info">
+                                    <div class="basket__img" style="background-image:url('img/item-pizza-1.png')"></div>
+                                    <div class="basket__name">
+                                        <a class="basket__name-text" href="#">Малибу 1</a>
+                                        <div class="basket__adds">
+                                            <div class="basket__adds-el">
+                                                <b>2x</b>соус тар-тар</div>
+                                            <div class="basket__adds-el">
+                                                <b>2x</b>соус тар-тар</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="basket__el-change">
+                                    <div class="basket__inc">
+                                        <div class="elements-icr-block">
+                                            <div class="incr">
+                                                <div class="incr__minus incr__nav">
+                                                    <svg class="icon">
+                                                        <use xlink:href="#minus"></use>
+                                                    </svg>
+                                                </div>
+                                                <div class="incr__val">
+                                                    <span>1</span>
+                                                    <div class="incr__val-coner"></div>
+                                                </div>
+                                                <div class="incr__plus incr__nav">
+                                                    <svg class="icon">
+                                                        <use xlink:href="#plus"></use>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="basket__price">120 р.</div>
+                                    <div class="basket__delete">
+                                        <svg class="icon">
+                                            <use xlink:href="#garbage"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="basket__el">
+                                <div class="basket__el-info">
+                                    <div class="basket__img" style="background-image:url('img/item-pizza-1.png')"></div>
+                                    <div class="basket__name">
+                                        <a class="basket__name-text" href="#">Малибу 2</a>
+                                        <div class="basket__adds">
+                                            <div class="basket__adds-el">
+                                                <b>2x</b>соус тар-тар</div>
+                                            <div class="basket__adds-el">
+                                                <b>2x</b>соус тар-тар</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="basket__el-change">
+                                    <div class="basket__inc">
+                                        <div class="elements-icr-block">
+                                            <div class="incr">
+                                                <div class="incr__minus incr__nav">
+                                                    <svg class="icon">
+                                                        <use xlink:href="#minus"></use>
+                                                    </svg>
+                                                </div>
+                                                <div class="incr__val">
+                                                    <span>1</span>
+                                                    <div class="incr__val-coner"></div>
+                                                </div>
+                                                <div class="incr__plus incr__nav">
+                                                    <svg class="icon">
+                                                        <use xlink:href="#plus"></use>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="basket__price">120 р.</div>
+                                    <div class="basket__delete">
+                                        <svg class="icon">
+                                            <use xlink:href="#garbage"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="basket__el">
+                                <div class="basket__el-info">
+                                    <div class="basket__img" style="background-image:url('img/item-pizza-1.png')"></div>
+                                    <div class="basket__name">
+                                        <a class="basket__name-text" href="#">Малибу 3</a>
+                                        <div class="basket__adds">
+                                            <div class="basket__adds-el">
+                                                <b>2x</b>соус тар-тар</div>
+                                            <div class="basket__adds-el">
+                                                <b>2x</b>соус тар-тар</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="basket__el-change">
+                                    <div class="basket__inc">
+                                        <div class="elements-icr-block">
+                                            <div class="incr">
+                                                <div class="incr__minus incr__nav">
+                                                    <svg class="icon">
+                                                        <use xlink:href="#minus"></use>
+                                                    </svg>
+                                                </div>
+                                                <div class="incr__val">
+                                                    <span>1</span>
+                                                    <div class="incr__val-coner"></div>
+                                                </div>
+                                                <div class="incr__plus incr__nav">
+                                                    <svg class="icon">
+                                                        <use xlink:href="#plus"></use>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="basket__price">120 р.</div>
+                                    <div class="basket__delete">
+                                        <svg class="icon">
+                                            <use xlink:href="#garbage"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="basket__el">
+                                <div class="basket__el-info">
+                                    <div class="basket__img" style="background-image:url('img/item-pizza-1.png')"></div>
+                                    <div class="basket__name">
+                                        <a class="basket__name-text" href="#">Малибу 4</a>
+                                        <div class="basket__adds">
+                                            <div class="basket__adds-el">
+                                                <b>2x</b>соус тар-тар</div>
+                                            <div class="basket__adds-el">
+                                                <b>2x</b>соус тар-тар</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="basket__el-change">
+                                    <div class="basket__inc">
+                                        <div class="elements-icr-block">
+                                            <div class="incr">
+                                                <div class="incr__minus incr__nav">
+                                                    <svg class="icon">
+                                                        <use xlink:href="#minus"></use>
+                                                    </svg>
+                                                </div>
+                                                <div class="incr__val">
+                                                    <span>1</span>
+                                                    <div class="incr__val-coner"></div>
+                                                </div>
+                                                <div class="incr__plus incr__nav">
+                                                    <svg class="icon">
+                                                        <use xlink:href="#plus"></use>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="basket__price">120 р.</div>
+                                    <div class="basket__delete">
+                                        <svg class="icon">
+                                            <use xlink:href="#garbage"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="header__sub-arrow-down header__sub-arrow">
+                            <div class="header__sub-arrow-wrap">
+                                <svg class="icon">
+                                    <use xlink:href="#arrow-down"></use>
+                                </svg>
+                            </div>
+                        </div>
+                        <!--basket-footer-->
+                        <div class="basket-footer">
+                            <div class="basket-total-text">Итого:</div>
+                            <div class="basket-total">
+                                <!--.basket-total-false 15 000 р.-->
+                                <div class="basket-total-true">12 000 р.</div>
+                            </div>
+                            <!--.basket-promo
+						.promo
+							input(type="text" placeholder="Промокод").promo-input
+							.promo-get
+								+icon("arrow-custom","icon")
+						-->
+                            <div class="basket-get">
+                                <a class="btn--md btn--light basket-clear js-basket-clear" href="#">Очистить</a>
+                                <a class="btn--md btn--yellow" href="#">Оформить</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--block header end-->
+        <div class="content">
+            <div class="content-bg content-bg--bottom"></div>
+            <div class="main-cont">
+                <h1>ул. Матвеевское шоссе, 23а</h1>
+                <!--cafe-item-->
+                <div class="cafe-item">
+                    <div class="cafe-item__img-wrap">
+                        <div class="cafe-item__img">
+                            <div class="cafe-item__img-el" style="background-image:url('img/restaurant.jpg')"></div>
+                        </div>
+                    </div>
+                    <div class="cafe-item__cont">
+                        <div class="cafe-item__title">Время работы</div>
+                        <div class="cafe-item__time">
+                            <span>11:00 - 24:00 (Вс - Чт)</span>
+                            <span>11:00 - 01:00 (Пт - Сб)</span>
+                        </div>
+                        <a class="cafe-item__phone" href="#">+7 132 123 12 12</a>
+                        <div class="cafe-item__phone-text">Прием заказов с 11:00 до 23:30</div>
+                        <div class="cafe-item__adv">
+                            <div class="cafe-item__adv-icon">
+                                <svg class="icon">
+                                    <use xlink:href="#wifi"></use>
+                                </svg>
+                            </div>
+                            <div class="cafe-item__adv-text">Бесплатный Wi-Fi</div>
+                        </div>
+                        <div class="cafe-item__adv">
+                            <div class="cafe-item__adv-icon">
+                                <svg class="icon">
+                                    <use xlink:href="#parking"></use>
+                                </svg>
+                            </div>
+                            <div class="cafe-item__adv-text">Большая парковка на 30 мест</div>
+                        </div>
+                        <div class="cafe-item__adv">
+                            <div class="cafe-item__adv-icon">
+                                <svg class="icon">
+                                    <use xlink:href="#food"></use>
+                                </svg>
+                            </div>
+                            <div class="cafe-item__adv-text">Банкетный зал на 80 человек</div>
+                        </div>
+                        <div class="cafe-item__text text">
+                            <p>Благодаря высоким потолкам и большим окнам в ресторане всегда много воздуха и света. Разработкой интерьера занимался талантливый московский дизайнер Андрей Цыганков. Спокойные тона разбавляются мягкими диванами лазурного цвета
+                                и зеленью живых растений. В качестве материала было использовано натуральное дерево, что делает интерьер</p>
+                        </div>
+                        <div class="cafe-get">Забронировать столик</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--block footer-->
+        <div class="fix-soc">
+            <div class="soc-row">
+                <a class="soc-row__el" href="#">
+                    <svg class="icon">
+                        <use xlink:href="#soc-vk"></use>
+                    </svg>
+                </a>
+                <a class="soc-row__el" href="#">
+                    <svg class="icon">
+                        <use xlink:href="#soc-facebook"></use>
+                    </svg>
+                </a>
+                <a class="soc-row__el" href="#">
+                    <svg class="icon">
+                        <use xlink:href="#soc-instagram"></use>
+                    </svg>
+                </a>
+                <a class="soc-row__el" href="#">
+                    <svg class="icon">
+                        <use xlink:href="#soc-twitter"></use>
+                    </svg>
+                </a>
+                <a class="soc-row__el" href="#">
+                    <svg class="icon">
+                        <use xlink:href="#soc-youtube"></use>
+                    </svg>
+                </a>
+            </div>
+        </div>
+        <div class="footer-info-wrap">
+            <div class="main-cont">
+                <div class="footer-info">
+                    <div class="footer-info__coll footer-info__coll-deliver">
+                        <div class="footer-info__title">Доставка за 60 минут</div>
+                        <div class="footer-info__text">Доставка производится ТОЛЬКО в пределах нашей зоны доставки.</div>
+                        <div class="footer-info__text">По другим адресам доставка НЕ ПРОИЗВОДИТСЯ.</div>
+                        <div class="footer-info__text">По предварительным заказам, оформленным к определенному времени, допускается отклонение плюс-минус 15-20 минут.</div>
+                        <div class="footer-info__text">Самовывоз с 11:00 до 23:00 по адресу ул.Московская, 198</div>
+                    </div>
+                    <div class="footer-info__coll">
+                        <div class="footer-info__title">Работаем с 10 до 23</div>
+                        <div class="footer-info__text">Без выходных</div>
+                    </div>
+                    <div class="footer-info__coll">
+                        <div class="footer-info__title">Бесплатная доставка</div>
+                        <div class="footer-info__text">При заказе от 500 руб</div>
+                    </div>
+                    <div class="footer-info__coll footer-info__map" style="background-image:url('img/map.jpg')">
+                        <div class="filter filter--yellow"></div>
+                        <div class="footer-info__map-icon">
+                            <svg class="icon">
+                                <use xlink:href="#compass"></use>
+                            </svg>
+                        </div>
+                        <div class="footer-info__map-text">Зона доставки</div>
+                    </div>
+                </div>
+                <div class="footer-map-wrap">
+                    <div class="footer-map">
+                        <!--pick map code her-->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-wrap">
+            <div class="main-cont">
+                <div class="footer">
+                    <div class="footer-comp">
+                        <div class="footer-company">Cheez © 2019</div>
+                        <a href="#">Политика конфиденциальности</a>
+                        <a href="#">Публичная оферта</a>
+                        <div class="soc-row">
+                            <a class="soc-row__el" href="#">
+                                <svg class="icon">
+                                    <use xlink:href="#soc-vk"></use>
+                                </svg>
+                            </a>
+                            <a class="soc-row__el" href="#">
+                                <svg class="icon">
+                                    <use xlink:href="#soc-facebook"></use>
+                                </svg>
+                            </a>
+                            <a class="soc-row__el" href="#">
+                                <svg class="icon">
+                                    <use xlink:href="#soc-instagram"></use>
+                                </svg>
+                            </a>
+                            <a class="soc-row__el" href="#">
+                                <svg class="icon">
+                                    <use xlink:href="#soc-twitter"></use>
+                                </svg>
+                            </a>
+                            <a class="soc-row__el" href="#">
+                                <svg class="icon">
+                                    <use xlink:href="#soc-youtube"></use>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="footer-nav">
+                        <div class="footer-nav__list">
+                            <a class="footer-nav__el" href="#">Пицца</a>
+                            <a class="footer-nav__el" href="#">Гарниры</a>
+                            <a class="footer-nav__el" href="#">Акции</a>
+                            <a class="footer-nav__el" href="#">Суши</a>
+                            <a class="footer-nav__el" href="#">Горячие закуски</a>
+                            <a class="footer-nav__el" href="#">Оплата</a>
+                            <a class="footer-nav__el" href="#">Роллы</a>
+                            <a class="footer-nav__el" href="#">Напитки</a>
+                            <a class="footer-nav__el" href="#">О нас</a>
+                        </div>
+                    </div>
+                    <div class="footer-contact">
+                        <a class="footer-phone" href="tel:+7 385 257 17 76">+7 385 257 17 76</a>
+                        <a class="footer-mail" href="mailto:vkusno@pravilasushi.com">vkusno@pravilasushi.com</a>
+                        <div class="get-pay">
+                            <div class="get-pay__title">Мы принимаем:</div>
+                            <div class="pay-row">
+                                <div class="pay-row__el">
+                                    <svg class="icon">
+                                        <use xlink:href="#mastercard--color"></use>
+                                    </svg>
+                                </div>
+                                <div class="pay-row__el">
+                                    <svg class="icon">
+                                        <use xlink:href="#visa"></use>
+                                    </svg>
+                                </div>
+                                <div class="pay-row__el">
+                                    <svg class="icon">
+                                        <use xlink:href="#paypal"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <!---->
+                        <a class="create" href="/">
+                            <span>Разработка сайта:</span>
+                            <img src="img/jq.svg" alt="" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--block footer end-->
+    </div>
+    <script src="js/combined.js"></script>
+    <script src="js/add-on.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/script-edit.js"></script>
+</body>
+
+</html>

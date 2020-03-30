@@ -1,0 +1,40 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
+.page
+	+header()
+	.content
+		.content-bg.content-bg--bottom
+		.main-cont
+			h1 ул. Матвеевское шоссе, 23а
+			//cafe-item
+			.cafe-item
+				.cafe-item__img-wrap
+					.cafe-item__img
+						.cafe-item__img-el(style="background-image:url('img/restaurant.jpg')")
+				.cafe-item__cont
+					.cafe-item__title Время работы
+					.cafe-item__time
+						span 11:00 - 24:00 (Вс - Чт)
+						span 11:00 - 01:00 (Пт - Сб)
+					a(href="#").cafe-item__phone +7 132 123 12 12
+					.cafe-item__phone-text Прием заказов с 11:00 до 23:30
+					.cafe-item__adv
+						.cafe-item__adv-icon
+							+icon("wifi","icon")
+						.cafe-item__adv-text Бесплатный Wi-Fi
+					.cafe-item__adv
+						.cafe-item__adv-icon
+							+icon("parking","icon")
+						.cafe-item__adv-text Большая парковка на 30 мест
+					.cafe-item__adv
+						.cafe-item__adv-icon
+							+icon("food","icon")
+						.cafe-item__adv-text Банкетный зал на 80 человек
+					.cafe-item__text.text
+						p Благодаря высоким потолкам и большим окнам в ресторане всегда много воздуха и света. Разработкой интерьера занимался талантливый московский дизайнер Андрей Цыганков. Спокойные тона разбавляются мягкими диванами лазурного цвета и зеленью живых растений. В качестве материала было использовано натуральное дерево, что делает интерьер
+					.cafe-get Забронировать столик
+
+
+	+footer()
+include ./block_html/_script.pug

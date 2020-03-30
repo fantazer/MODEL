@@ -139,7 +139,7 @@ mixin modal()
 							+icon("close","icon")
 						.modal-title Выберите <br> ваш город!
 					.modal-content
-						.position-list.nice-scroll
+						.position-list.scroll
 							- for (var i=0;i<4;i++)
 								a(href="#").position-list__el Москва
 								a(href="#").position-list__el Волгоград
@@ -255,5 +255,33 @@ mixin modal()
 									input(type="text"  data-input="Домофон").input-animate
 						.btn--md.btn--light.btn--full Отправить
 				//address message === end
+
+				//review
+				.modal.modal--md(data-modal="review")
+					.modal-content
+						.modal-close
+							+icon("close-fat","icon")
+						.modal-title.modal-title--lg Оставить отзыв
+						.modal-text Вам понравились Правила Суши? <br> Жми лайк!
+						.like-row
+							.like-el.like-el--true
+								+icon("like","icon")
+							.like-el.like-el--false
+								+icon("unlike","icon")
+						form( action="#")
+							.input-cont
+								.input-row
+									input(type="text" name="name"  data-input="Имя").input-animate
+							.input-cont
+								.input-row
+									input(type="text" name="phone" data-input="Телефон").input-animate
+							.input-cont
+								.input-row
+									input(type="text" name="mail" data-input="Почта").input-animate
+							.input-cont
+								.input-row
+									textarea(name="text", cols="30", rows="6" class="input-animate" data-input="Cообщение")
+							input(type="submit" value="Отправить").btn--md.btn--mark.btn--full
+				//review === end
 
 	//block modal end

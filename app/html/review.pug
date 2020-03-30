@@ -1,0 +1,35 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
+.page
+	+header()
+	.content
+		.content-bg.content-bg--bottom
+		.main-cont
+			.title-row
+				.title-row__text Отзывы
+				.btn--md.btn--light.review-add Добавить отзыв
+			.review
+				- for (var i=0;i<5;i++)
+					.review__el
+						.review__el-head
+							.review__el-icon.review__el-icon--true
+								+icon("like","icon")
+							.review__el-info
+								.review__el-name Валентина
+								.review__el-date 15 марта 2019 13:04
+						.review__el-text
+							p Огромное спасибо! Заказываю у Вас 1-й раз. Порадовало всё, начиная с приятного молодого человека, который приехал на 10 мин.раньше заявленного срока. Аккуратная и удобная.. фирменная упаковка, хорошие одноразовые столовые приборы.
+					.review__el
+						.review__el-head
+							.review__el-icon.review__el-icon--unlike
+								+icon("unlike","icon")
+							.review__el-info
+								.review__el-name Егор Валерьевич
+								.review__el-date 15 марта 2019 13:04
+						.review__el-text
+							p Привезли холодную пиццу. Курьер отказался брать чаевые.
+			.loader
+				img(src="img/loader.svg", alt="")
+	+footer()
+include ./block_html/_script.pug

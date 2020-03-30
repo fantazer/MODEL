@@ -1748,6 +1748,7 @@ body
 .card-descr
 	+below(768px)
 		max-width: 100%
+		text-align center
 	line-height: 1.6
 	max-width 400px
 	margin-bottom: 30px
@@ -2364,7 +2365,7 @@ select.select-beauty
 
 
 .modal-title
-	font-weight: 600
+	font-weight: 700
 	text-align: center
 
 
@@ -2551,6 +2552,7 @@ select.select-beauty
 .modal-text
 	margin-bottom: 20px
 	line-height: 1.6
+	text-align center
 .btn--full
 	width: 100%
 	text-align center
@@ -2564,7 +2566,7 @@ select.select-beauty
 
 .position-list
 	max-height 300px
-
+	position relative
 .position-list__el
 	display block
 	margin-bottom: 20px
@@ -2806,7 +2808,7 @@ select.select-beauty
 .history-total-val
 	@extend .type--xl
 	font-weight 700
-	font-family Montserrat
+
 .history-descr
 	+below(1024px)
 		width: 100%
@@ -2963,10 +2965,11 @@ select.select-beauty
 		.card-list__title
 			color $mark
 .card-list__img
-	padding: 50% 10%
+	padding: 40% 10%
 	bg-full()
 	position: relative
 	overflow: hidden
+	br(4px)
 .card-list__date
 	position: absolute
 	left 0
@@ -2989,7 +2992,6 @@ select.select-beauty
 	display: inline-block
 .card-list__decr
 	line-height: 1.6
-	color $gray
 
 .news-full
 	+below(768px)
@@ -3002,8 +3004,9 @@ select.select-beauty
 		width: 100%
 		margin-bottom: 20px
 		padding: 30% 10%
-	width: 48%
 	bg-full()
+	br(4px)
+	width: 48%
 	overflow: hidden
 	padding: 24% 10%
 .news-full__cont
@@ -3011,3 +3014,375 @@ select.select-beauty
 		width: 100%
 	width: 45%
 // ==== SALE ==== === end
+
+// REVIEW
+.title-row
+	+below(1024px)
+		fw()
+		fl()
+		align-items center
+	+below(768px)
+		margin-top: 20px
+		margin-bottom: 20px
+	f()
+	align-items: center
+	margin-bottom: 40px
+	.section-title
+		margin-bottom: 0
+		margin-right: 40px
+	.promo-wrap
+		+below(768px)
+			width: 100%
+			margin-top: 20px
+			justify-content: flex-start
+.title-row--mid
+	+below(1024px)
+		flex(mid)
+		fl()
+	.title-row__text
+		+below(1024px)
+			text-align: center
+	.lk-switch
+		+below(1024px)
+			flex(mid)
+.title-date
+	+below(1024px)
+		margin-top: 20px
+
+	padding: 10px 20px
+	border 1px solid $border-color
+	border-radius 0 10px 0 10px
+	font-weight: 600
+	color $gray
+.title-row__back
+	+below(1024px)
+		display: none
+
+	flex(mid)
+	margin-right: 40px
+	.icon
+		&:hover
+			fill darken($red,20)
+		size 64px
+		fill $red
+		tr(all)
+.title-row__text
+	+below(1024px)
+		width: 100%
+		margin-right: 0
+	@extend .type--xxl
+	font-weight 700
+	margin: 0 40px 0 0
+	letter-spacing 0.72px
+
+.review-add
+	+below(1024px)
+		width: 100%
+		margin-top: 20px
+
+.review
+	+below(640px)
+		grid-template-columns: 1fr
+	display: grid
+	grid-gap 20px
+	grid-template-columns: repeat(2, 1fr)
+	column-gap 40px
+.review__el
+	+below(640px)
+		padding: 20px
+	background: #f8f8f8
+	padding: 30px
+	display: inline-block
+	width: 100%
+	br(10px)
+.review__el-head
+	f()
+	margin-bottom: 10px
+.review__el-icon
+	+below(640px)
+		margin-right: 15px
+	margin-right: 30px
+	.icon
+		+below(640px)
+			size 30px
+		size 50px
+		fill $gray
+.review__el-icon--true
+	.icon
+		fill $yellow
+//.review__el-info
+.review__el-name
+	color $dark
+	@extend .type--md
+	font-weight 700
+	margin-bottom: 10px
+.review__el-date
+	color $gray
+	font-weight 300
+.review__el-text
+	+below(640px)
+		padding-left: 0
+	padding-left: 80px
+	line-height: 1.8
+
+.loader
+	flex(mid)
+	margin: 20px 0
+// REVIEW === end
+
+.like-row
+	flex(mid)
+	margin-bottom: 20px
+.like-el
+	flex(mid)
+	br(5px)
+	cp()
+	tr(all)
+	border 1px solid $border-color
+	padding: 20px
+	margin: 0 10px
+	&:hover
+		border-color $green
+	.icon
+		size 35px
+
+.like-el--true
+	fill $mark
+.like-el--false
+	fill $gray
+
+.like-el--true.like-el--active
+	border 1px solid $mark
+	background: $mark
+	.icon
+		fill white
+
+.like-el--false.like-el--active
+	border 1px solid $red
+	background: $red
+	.icon
+		fill white
+
+.lk-switch
+	+below(1024px)
+		margin-left 0
+		margin-top: 30px
+	+below(640px)
+		width: 100%
+	f()
+	br(30px)
+	margin-left: auto
+	overflow: hidden
+.lk-switch__el
+	+below(640px)
+		padding: 15px
+		width: 100%
+		font-size: 12px
+	cp()
+	tr(all)
+	color black
+	background: #f8f8f8
+	text-align: center
+	padding: 15px 35px
+	position: relative
+	border-right 1px solid #e3e3e3
+	display: block
+	font-size: 14px
+	&:hover
+		background: $mark
+	&:last-child
+		border 0
+.lk-switch__el-val
+	position: absolute
+	color $mark
+	top 8px
+	right: 10%
+	font-size: 10px
+.lk-switch__el--active
+	background: $mark
+	color white
+
+// ==== REST ====
+.restaurant
+	+below(960px)
+		grid-gap 20px
+		grid-template-columns: repeat(auto-fill, minmax(18rem,1fr))
+	display: grid
+	grid-gap 50px
+	//grid-template-columns: repeat(5, 1fr)
+	grid-template-columns: repeat(auto-fill, minmax(22rem,1fr))
+.restaurant-item__img
+	bg-full()
+	padding: 30% 10%
+	display: block
+	position: relative
+	br(4px)
+.restaurant-item__date
+	position: absolute
+	padding: 10px 15px
+	background: rgba(255, 255, 255, 0.75)
+	bottom 0
+	left 0
+.restaurant-item__cont
+	padding-top: 20px
+.restaurant-item__title
+	@extend .type--lg
+	font-weight 600
+	line-height: 1.6
+	margin-bottom: 10px
+	display: block
+.restaurant-item__time
+	color $gray
+	line-height: 1.8
+	margin-bottom: 5px
+	&:last-child
+		margin-bottom: 0
+// ==== REST ==== === end
+
+// ==== REST FULL
+.cafe-item
+	+below(768px)
+		fw()
+	f()
+	justify-content: space-between
+	margin-bottom: 50px
+.cafe-item__img-wrap
+	+below(768px)
+		width: 100%
+		margin-bottom: 10px
+	width: 55%
+.cafe-item__img-el
+	+below(768px)
+		margin-bottom: 20px
+	bg-full()
+	padding: 30% 10%
+	br(4px)
+.cafe-item__cont
+	+below(768px)
+		width: 100%
+		padding: 0 10px
+	width: calc(45% - 40px)
+.cafe-item__title
+	+below(1024px)
+		font-size: 28px
+	+below(768px)
+		font-size: 24px
+	+below(640px)
+		margin-bottom: 10px
+		font-size: 20px
+	color $dark
+	@extend .type--lg
+	font-weight 700
+	margin-bottom: 20px
+.cafe-item__time
+	+below(640px)
+		margin-bottom: 20px
+	color #aaadb2
+	margin-bottom: 20px
+	span
+		display: inline-block
+		margin-bottom: 10px
+		margin-right: 20px
+.cafe-item__phone
+	display: block
+	color $dark
+	@extend .type--lg
+	font-weight: 700
+	margin-bottom: 10px
+.cafe-item__phone-text
+	margin-bottom: 50px
+
+.cafe-item__text
+	+below(768px)
+		margin: 0
+	padding-right: 20px
+.cafe-item__adv
+	f()
+	margin-bottom: 20px
+.cafe-item__adv-icon
+	.icon
+		fill $yellow
+		size 28px
+		margin-right: 20px
+//.icon
+.cafe-item__adv-text
+	@extend .type--md
+
+.cafe-get
+	@extend .btn--lg
+	@extend .btn--light
+	margin: 20px 0
+	padding: 15px 40px
+	font-weight: 700
+// ==== REST FULL === end
+
+// ==== LOCATION ====
+.location
+	+below(640px)
+		margin-left: -10px
+		width calc(100% + 20px)
+		margin-bottom: 0
+	f()
+	align-items: stretch
+	margin-bottom: 100px
+	.ps__scrollbar-y-rail
+		background-color #eaeaea !important
+		opacity 1!important
+	.ps > .ps__scrollbar-y-rail:hover > .ps__scrollbar-y, .ps > .ps__scrollbar-y-rail:active > .ps__scrollbar-y
+		width: 10px!important
+	.ps > .ps__scrollbar-y-rail
+		width: 14px!important
+		background-color #f6f6f6!important
+		opacity 1!important
+	.ps > .ps__scrollbar-y-rail > .ps__scrollbar-y
+		width: 10px!important
+
+.location-list
+	+below(960px)
+		width: 40%
+	+below(640px)
+		display: none
+	width: 30%
+	max-height 700px
+	position: relative
+	border 1px solid $border-color
+	border-right 0
+.location-info
+	+below(960px)
+		width: 60%
+	+below(640px)
+		width: 100%
+		min-height 500px
+	max-height 700px
+	width: 70%
+	padding: 15% 10%
+	background: $snow
+
+.location__el
+	+below(1200px)
+		padding: 20px
+	padding: 20px 40px
+	border-top 1px solid $border-color
+	display: block
+	background: white
+	tr(all)
+	&:hover
+		background: #f8f8f8
+	&:last-child
+		border-bottom 1px solid $border-color
+
+.location__el-name
+	+below(1200px)
+		font-size: 18px
+	color $dark
+	@extend .type--lg
+	font-weight 500
+	margin-bottom: 10px
+	line-height: 1.6
+.location__el-time
+	color $gray
+	line-height: 1.8
+	margin-bottom: 5px
+	&:last-child
+		margin-bottom: 0
+// ==== LOCATION ==== === end
