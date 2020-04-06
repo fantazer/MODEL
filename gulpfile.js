@@ -387,10 +387,10 @@ gulp.task('build:ftp',function(){
 				//'screenshot',
 				'img',
 				//'svg',
-				'make'
+				'make',
 				//'zip',
 				//'guide',
-				//'ftp'
+				'ftp'
 				//'template'
 		)
 });
