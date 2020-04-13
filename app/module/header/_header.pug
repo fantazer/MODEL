@@ -5,11 +5,7 @@ mixin header()
 		.header-top-wrap
 			.main-cont
 				.header-top
-					.head-toggle
-						+icon("menu","icon icon-open")
-						+icon("close","icon icon-close")
-					a(href="/").logo
-						img(src="img/logo.svg", alt="")
+
 					.header-location
 						.header-info
 							.header-info__icon
@@ -22,8 +18,42 @@ mixin header()
 								+icon("phone","icon")
 							.header-info__val
 								a(href="tel:+7 (7172) 767 767")  +7 (7172) 767 767
-								span.divider |
-								a(href="tel:+7 (707) 988 78 87")  +7 (707) 988 78 87
+						.header-info__text Сегодня 10 - 24
+					.header-nav
+						a(href="#").header-nav__el Акции
+						a(href="#").header-nav__el Оплата
+						a(href="#").header-nav__el О нас
+
+
+		.header-menu-wrap
+			.main-cont
+
+				.header-menu
+					.head-toggle
+						+icon("menu","icon icon-open")
+						+icon("close","icon icon-close")
+					a(href="/").logo
+						img(src="img/logo.svg", alt="")
+					.nav
+						.nav-toggle
+							+icon("cap","icon")
+							span Меню
+						//.nav-wrap
+							.nav-box.nice-scroll
+								- for (var i=0;i<20;i++)
+									.nav-el
+										.nav-el__cont
+											span Кондитерские изделия #{i+1}
+											+icon("arrow-right","icon")
+										.nav-sub.scroll
+												- for (var j=0;j<20;j++)
+													a(href="#").nav-sub__el Варенье/джемы/сиропы #{i+1+'/'+ j}
+					.header-contact
+						.header-info
+							.header-info__icon
+								+icon("phone","icon")
+							.header-info__val
+								a(href="tel:+7 (7172) 767 767")  +7 (7172) 767 767
 						.header-info__text Сегодня 10 - 24
 					a(href="#").header-auth.header-auth--true
 						// toggle .header-auth--true
@@ -34,11 +64,62 @@ mixin header()
 							span Александр
 							.header-auth__bonus
 								span 356 Б
-					.cart-wrap.cart-wrap--mobile
+					.cart-wrap
+						.cart-cost 2 850 ₽
 						.cart
-							+icon("close","icon icon--close")
+							a(href="order.html").cart-link
+							+icon("arrow-right-fat","icon icon--close")
 							+icon("cart","icon icon--open")
 							.cart-val 33
+						.basket-wrap
+							.basket
+								.basket-wrap-coner
+								// !!! remove .hidden on state empty
+								.basket-empty.hidden
+									img(src="img/empty.svg", alt="").basket-empty-img
+
+									.basket-empty__title Корзина пуста :(
+									.basket-empty__text Бесплатная доставка от 500 ₽, доставляем за 60 минут
+								.basket-list
+									.basket-container.nice-scroll
+										- for (var i=0;i<8;i++)
+											.basket__el
+												.basket__el-info
+													.basket__img(style="background-image:url('img/item-pizza-1.png')")
+													.basket__cont
+														.basket__name
+															span Ветчина и грибы #{i + 1}
+															.basket__delete
+																+icon("garbage","icon")
+														.basket__descr средняя 30 см, традиционное тесто
+														.basket__el-change
+															.basket__inc.incr--small
+																+incr(1,"incr--small")
+															.basket__price 120 р.
+
+								//basket-footer
+								.basket-footer
+									.basket-total
+										.basket-total-row
+											.basket-total__text Доставка
+											.basket-total__val 500 ₽
+										.basket-total-row
+											.basket-total__text Сумма заказа
+											.basket-total__val 2 169 ₽
+								.basket-add
+									- for (var i=0;i<8;i++)
+										.basket-add__el
+											.basket-add-info
+												.basket-add__img(style="background-image:url('img/cake.jpg')")
+												.basket-add-cont
+													.basket-add-title Торт Медуза
+													.basket-add-cost 380 р
+													.basket-add-get в корзину
+
+									.basket-add__el
+									.basket-add__el
+
+
 		.slide-menu
 			.slide-row
 				.slide-header-auth
@@ -70,73 +151,4 @@ mixin header()
 						.slide-header-info__val
 							a(href="tel:+7 (7172) 767 767")  +7 (7172) 767 767
 					.slide-header-info__text Сегодня 10 - 24
-
-
-		.header-menu-wrap
-			.main-cont
-				.header-menu
-					a(href="/").logo
-						img(src="img/logo.svg", alt="")
-					.header-nav
-						a(href="#").header-nav__el Пицца
-						a(href="#").header-nav__el Суши
-						a(href="#").header-nav__el Закуски
-						a(href="#").header-nav__el Гарниры
-						a(href="#").header-nav__el Комбо
-						a(href="#").header-nav__el Напитки
-					.header-nav.header-nav--add
-						a(href="#").header-nav__el Акции
-						a(href="#").header-nav__el Доставка
-						a(href="#").header-nav__el О нас
-					.cart-wrap.cart-wrap--desctop
-						.cart-cost 2 850 ₽
-						.cart
-							+icon("close","icon icon--close")
-							+icon("cart","icon icon--open")
-							.cart-val 33
-
-		.basket-wrap
-			.main-cont
-				.basket
-					.basket-wrap-coner
-					.basket-empty
-						.basket-empty__title Ваша корзина пуста.
-						.basket-empty__text Добавь интересующие товары из меню сайта
-
-					.header__sub-arrow-up.header__sub-arrow
-						.header__sub-arrow-wrap
-							+icon("arrow-up","icon")
-					.basket-container
-						- for (var i=0;i<4;i++)
-							.basket__el
-								.basket__el-info
-									.basket__img(style="background-image:url('img/item-pizza-1.png')")
-									.basket__name
-										a(href="#").basket__name-text Малибу #{i+1}
-										.basket__adds
-											.basket__adds-el <b>2x</b> соус тар-тар
-											.basket__adds-el <b>2x</b> соус тар-тар
-								.basket__el-change
-									.basket__inc
-										+incr()
-									.basket__price 120 р.
-									.basket__delete
-										+icon("garbage","icon")
-					.header__sub-arrow-down.header__sub-arrow
-						.header__sub-arrow-wrap
-							+icon("arrow-down","icon")
-					//basket-footer
-					.basket-footer
-						.basket-total-text Итого:
-						.basket-total
-							//.basket-total-false 15 000 р.
-							.basket-total-true 12 000 р.
-						//.basket-promo
-							.promo
-								input(type="text" placeholder="Промокод").promo-input
-								.promo-get
-									+icon("arrow-custom","icon")
-						.basket-get
-							a(href="#").btn--md.btn--light.basket-clear.js-basket-clear Очистить
-							a(href="#").btn--md.btn--yellow Оформить
 	//block header end

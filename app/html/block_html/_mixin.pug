@@ -31,10 +31,10 @@ mixin radio(text,group,disable)
           .icon-radio
         .sytle-input-text=text
 
-mixin incr(a)
+mixin incr(a,type)
   - a = a || 1
   .elements-icr-block
-    .incr
+    .incr(class=type?type:'')
       .incr__minus.incr__nav
         +icon("minus","icon")
       .incr__val
@@ -43,31 +43,39 @@ mixin incr(a)
       .incr__plus.incr__nav
         +icon("plus","icon")
 
-mixin incr-cheese(a)
-  - a = a || 1
-  .elements-icr-block
-    .incr.incr--cheese
-      .incr__minus.incr__nav
-        +icon("minus-cheese","icon")
-      .incr__val
-        span=a
-        .incr__val-coner
-      .incr__plus.incr__nav
-        +icon("plus-cheese","icon")
-
 mixin product()
   .product-el
+    .product-el--add
+      +icon("cart","icon")
+    // use .product-label--black ||.product-label--red
     .product-label пицца дня
     a(href="#").product__img
       .product__img-el(style="background-image:url('img/item-pizza-1.png')")
     .product__cont
       a(href="#").product__title Рокки Роутс
-      .product__text Сыр, пицца-соус, ананас, сыр, перец болгарский, куриное филе, пицца-соус, ананас
-        span.product__add.tooltip
-          +icon("plus","icon")
-          .top
-            i
-            | добавить ингредиенты
+      .product-box
+        .product__text Сыр, пицца-соус, ананас, сыр, перец болгарский, куриное филе, пицца-соус, ананас
+          //span.product__add.tooltip
+              +icon("plus","icon")
+              .top
+                i
+                | добавить ингредиенты
+        .item-ingr.hidden-block
+          .item-ingr__text Пищевая ценность блюда, г
+          .item-ingr__cont
+            .item-ingr__el
+              .item-ingr__el-val 190
+              .item-ingr__el-name белки
+            .item-ingr__el
+              .item-ingr__el-val 19
+              .item-ingr__el-name жиры
+            .item-ingr__el
+              .item-ingr__el-val 290
+              .item-ingr__el-name углеводы
+            .item-ingr__el
+              .item-ingr__el-val 370,6
+              .item-ingr__el-name ккал
+
       .size
         .size__el.size__el--active 25 см
         .size__el 30 см

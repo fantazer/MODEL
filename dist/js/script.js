@@ -54,10 +54,11 @@ $(document).ready(function () {
 	// toggle lk-history === end
 
 	//custom scroll
-/*	$(".nice-scroll").niceScroll({
+ 	$(".nice-scroll").niceScroll({
 		autohidemode:"false",
-		touchbehavior:"true"
-	});*/
+		touchbehavior:"true",
+		cursorcolor: "#d9dadb"
+	});
 	//custom scroll === end
 
 
@@ -66,29 +67,7 @@ $(document).ready(function () {
 	// nice select === end
 
 // ====== basket ======
-	//cart vertical slider
-	var initSlider = function(){
-		$('.basket-container').not('.slick-initialized').slick({
-		  slidesToShow: 2,
-		  autoplay: false,
-		  speed: 500,
-		  vertical:true,
-		  arrows: true,
-		  prevArrow: $('.header__sub-arrow-up'),
-		  nextArrow: $('.header__sub-arrow-down'),
-		  verticalSwiping:true,
-		  infinite:false,
-		  responsive: [
-					{
-							breakpoint: 768,
-							settings: "unslick"
-					}
-			]
-		});
 
-	};
-	initSlider();
-	//cart vertical slider end
 
 	//modal ingr toggle
 	$('.add-ingr__el').click(function(){
@@ -161,7 +140,7 @@ $(document).ready(function () {
 	//toggle menu end
 
 	//toggle basket
-	$('.cart-wrap').click(function (event) {
+	$('.cart-wrap').hover(function (event) {
 		$('.header-menu-sub-wrap').removeClass('bounce-show');
 		$('.header-menu').removeClass('header-menu--open');
 		if ($(window).width() < 769) {
@@ -186,35 +165,7 @@ $(document).ready(function () {
 	//remove item in basket
 
 	// function for valide number item in cart
-	var cartSliderItem = function () {
-		//$('.main-slider').slick('reinit');
-		//initSlider();
-		if (!$('.basket-container .basket__el').length) {
-			//$('.cart-wrap').click();
-			$('.basket-empty').show();
-			$('.basket-footer').hide();
-			$('.basket-container').hide();
-		}else{
-			$('.basket-empty').hide();
-			$('.basket-footer').show();
-			$('.basket-container').show();
-		}
-		if ($('.basket-container .basket__el').length < 3) {
-			$('.slick-arrow').hide()
-		} else {
-			$('.slick-arrow').show()
-		}
-		/*$('.basket-container').on('reInit afterChange', function(event, slick, currentSlide, nextSlide){
-			var i = (currentSlide ? currentSlide : 0) + 1;
-			console.log(slick.slideCount);
-		});*/
-	};
 
-	$('.basket__delete').click(function () {
-
-		$(this).closest('.basket__el').remove();
-		cartSliderItem();
-	});
 	//remove item in basket end
 
 
@@ -230,13 +181,7 @@ $(document).ready(function () {
 	});
 	//remove item in basket by decrement end
 
-	//clear basket
-	$('.js-basket-clear').click(function(){
-		$('.basket-container .basket__el').remove();
-		$('.basket-container .slick-slide').remove();
-		cartSliderItem();
-	});
-	//clear basket=== end
+
 
 	var shrinkHeader = 450;
 	$(window).scroll(function() {
@@ -271,6 +216,19 @@ $(document).ready(function () {
 
 	//main slider === end
 
+	// basket slider
+	$('.basket-add').slick({
+		speed: 500,
+		autoplay: false,
+		arrows:true,
+		dots:false,
+		slidesToShow: 1.5,
+		infinite: false,
+		rows:0,
+		prevArrow:'<svg class="slick-prev slick-arrow"><use xlink:href="#arrow-left"></use></svg>',
+		nextArrow:'<svg class="slick-next slick-arrow"><use xlink:href="#arrow-right"></use></svg>',
+	});
+	// basket slider === end
 
 	// ==== PRODUCT ====
 	$('.product-get').click(function () {
@@ -311,8 +269,12 @@ $(document).ready(function () {
 
 	$('.product-el').hover(function () {
 		$(this).addClass("product-el--hover")
+		$(this).closest(".product-el").find(".product__text").addClass("hidden-block")
+		$(this).closest(".product-el").find(".item-ingr").removeClass("hidden-block")
 	},function(){
 		$(this).removeClass("product-el--hover")
+		$(this).closest(".product-el").find(".product__text").removeClass("hidden-block")
+		$(this).closest(".product-el").find(".item-ingr").addClass("hidden-block")
 	})
 
 	// sale slider
@@ -440,11 +402,7 @@ $(' .modal-close , .hide-modal').click(function () {
 
 	//detect mobile
 
-	$(window).resize(function(){
-		if($(window).width() > 769){
-			initSlider();
-		}
-	});
+
 	//detect mobile end
 
 	//mobile menu
@@ -507,7 +465,7 @@ $(' .modal-close , .hide-modal').click(function () {
 
 	// template scroll
 	$('.scroll').perfectScrollbar({
-		wheelSpeed: 1.2,
+		//wheelSpeed: 0.8,
 	});
 	// template scroll === end
 });

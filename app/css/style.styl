@@ -17,18 +17,17 @@ body
 	line-height 1.2
 	letter-spacing 0.01em
 
-.cheeze
-	flex(mid)
-	tr(all)
-	cp()
-	bg-full()
-	background-size: contain
-	padding: 20px 30px
-	display: inline-block
-	color $dark
-	font-size: 14px
-	font-weight 700
-	transform translateY(6px)
+.hidden-block
+	position: relative
+	height: 0
+	z-index 3
+	opacity:0
+	left -9999px
+	transform translateY(-20px)
+	margin: 0
+	padding: 0
+
+
 
 .main-cont
 	center(1250px,10px)
@@ -37,15 +36,13 @@ body
 	position: relative
 .header-top-wrap
 	+below(1024px)
-		padding: 10px 0
-	+below(768px)
-		padding: 5px 0
-	padding: 20px 0
-	background: white
+		display none
+	background: #f5f5f5
 //.main-cont
 .header-top
 	f()
 	align-items: center
+	height: 60px
 .logo
 	+below(1024px)
 		width: 200px
@@ -57,12 +54,13 @@ body
 	+below(1024px)
 		display: none
 	margin-right: 5%
+	f()
+	align-items center
 .header-info
 	f()
 	cp()
 	align-items: center
 	margin-right: 5%
-	margin-bottom: 10px
 	.divider
 		color $snow
 		@extend .type--md
@@ -74,7 +72,7 @@ body
 	flex(mid)
 	.icon
 		size 20px
-		fill $mark
+		fill #b1b3b4
 
 .header-info__val
 	white-space nowrap
@@ -82,18 +80,22 @@ body
 	@extend .type--md
 	font-weight 600
 .header-info__text
-	color $gray
 	@extend .type--sm
+	color #b1b3b4
 	font-weight 500
+	white-space nowrap
 .header-contact
-	+below(1024px)
+	+below(768px)
 		display: none
+	f()
+	align-items center
 .header-auth
 	+below(1024px)
 		display: none
 	f()
 	align-items: center
 	margin-left: auto
+	margin-right: 100px
 	.icon
 		margin-right: 10px
 		size 20px
@@ -120,17 +122,17 @@ body
 	position: absolute
 	padding: 4px 8px
 	background: $mark
-	top -20px
-	right: 0
+	top -10px
+	right: -50%
 	font-weight: 700
 	line-height: 1
 	flex(mid)
-	font-size: 12px
+	font-size: 10px
 	color white
 	br(10px)
+	font-weight: 700
 	span
 		display: inline-block
-		margin-top: -2px
 //
 .slide-header-auth
 	color white
@@ -216,26 +218,23 @@ body
 
 //
 .header-menu-wrap
-	white-space nowrap
-	overflow-x auto
 	border-top 1px solid $border-color
 	border-bottom 1px solid $border-color
 	//padding: 10px 0
 	position: relative
-	overflow-y: hidden
-	.logo
-		display: none
+	.header-contact
+		margin-left: 30px
+		display none
 .header-menu
-	+below(1024px)
-		padding: 15px 0
 	align-items: center
-	padding: 10px 0
+	//padding: 10px 0
 	f()
 .header-nav
 	align-items: center
 	f()
+	margin-left auto
 .header-nav__el
-	color $dark
+	color #b1b3b4
 	margin-right: 20px
 	border-bg()
 	tr()
@@ -245,12 +244,17 @@ body
 	.header-nav__el
 		color $gray
 .cart-wrap
+	+below(1024px)
+		margin-left auto
+		padding: 5px 0
 	f()
 	cp()
-	margin-left: auto
 	align-items: center
+	height: 100%
 	.icon--close
 		display: none
+	position relative
+	padding: 10px 0
 .cart-cost
 	margin-right: 20px
 	color $brown
@@ -267,6 +271,16 @@ body
 	.icon
 		size 28px
 		fill $mark
+
+.cart-link
+	position absolute
+	width: 100%
+	height: 100%
+	top 0
+	left 0
+	z-index 10
+	display none
+
 .cart-val
 	position: absolute
 	top 50%
@@ -309,8 +323,10 @@ body
 	animation-name: bounceIn
 
 .basket-wrap
+	+below(1024px)
+		display none
+	width: 350px
 	position: absolute
-	width: 100%
 	left: -9999px
 	top 100%
 	background: white
@@ -321,28 +337,26 @@ body
 	border-top:1px solid #e6e6e6
 	transition opacity .6s
 	margin-top: -1px
+	br(10px)
+
 .bounce-show
 	animation:  bounceIn  .3s 1 ease-in-out
 	//display: block!important
 	transition opacity .6s
-	left 0
+	left initial
 	opacity: 1
-
+	right: 0
 .basket
-	+below(768px)
-		padding: 0 0 90px 0
-		height: calc(100vh - 50px)
-		overflow-y scroll
-	padding: 60px 0
+	padding: 20px 0
 
 .basket-wrap-coner
 	+below(768px)
 		right: 19px
 	position: absolute
-	top -8px
+	top -7px
 	size 16px
 	background white
-	right: 28px
+	right: 17px
 	transform rotate(45deg)
 	border-top:1px solid #e6e6e6
 	border-left:1px solid #e6e6e6
@@ -357,22 +371,36 @@ body
 	display flex!important
 	flex(between)
 	padding: 15px 20px
-	border-top 1px solid #f6f6f6
-	margin-top: -3px
 	outline none!important
 
-.basket-container
-	+below(768px)
-		height: auto
-	height: 185px
+.basket__descr
+	font-size: 12px
+	line-height: 1.4
 
+.basket-container
+	max-height: calc(70vh - 200px)
+	position relative
+	overflow hidden
+	margin-right: 3px
+	margin-top: 3px
+.basket-list
+	position relative
+	&:before
+		content ''
+		position absolute
+		width: 100%
+		height: 35px
+		bottom 0
+		left 0
+		background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #ffffff 100%);
+		z-index 10
 .basket__img
 	+below(768px)
 		margin-right: 0
 		height: 100px
 		width: 100px
-	width: 80px
-	height: 60px
+	size 70px
+	br(5px)
 	bg-full()
 	background-size: contain
 	margin-right: 20px
@@ -393,9 +421,12 @@ body
 	background-size: contain
 
 .basket__name
-	+below(768px)
-		width: 100%
-	width calc(100% - 80px)
+	font-weight: 700
+	font-size: 14px
+	margin-bottom: 5px
+	display block
+	f()
+
 .basket__name-text
 	+below(768px)
 		font-size: 20px
@@ -427,45 +458,30 @@ body
 	+below(768px)
 		margin-top: 20px
 		font-size: 20px
-	@extend .type--lg
 	color $dark
 	font-weight 600
+	font-size: 14px
+	white-space nowrap
 
 .basket__delete
-	+below(768px)
-		position: absolute
-		top 20px
-		right: 20px
+	margin-left: auto
 	.icon
 		cp()
 		tr(all)
-		size 25px
+		size 16px
 		fill black
-		opacity 0.3
 		&:hover
-			opacity: 1
+			fill $mark
 
 .basket__el-info
-	+below(768px)
-		width: 100%
-		flex(mid)
-		fl()
-		fw()
 	f()
-	align-items: center
-	width: 65%
+	align-items: flex-start
+
+.basket__cont
+	width calc(100% - 90px)
 
 .basket__el-change
-	+below(1024px)
-		width: 45%
-	+below(768px)
-		flex(mid)
-		fl()
-		fw()
-		width: 100%
-		margin-top: 20px
 	flex(between)
-	width: 30%
 
 .basket-footer
 	+below(768px)
@@ -475,26 +491,27 @@ body
 	align-items: center
 	margin-top: 30px
 
-.basket-total-text
-	+below(768px)
-		margin-bottom: 20px
-		margin-right: 0
+.basket-total__text
 	font-size: 15px
 	margin-right: 20px
 
 .basket-total
-	+below(768px)
-		margin-right: 0
-		text-align: center
-		margin-bottom: 20px
-	margin-right: 60px
-
+	margin: 0 20px
+	padding-top: 20px
+	border-top 1px solid $border-color
+	width: 100%
 .basket-total-false
 	color #959595
 	font-family Roboto
 	font-size 15px
 	font-weight 400
 	text-decoration line-through
+
+.basket-total-row
+	flex(between)
+	margin-bottom: 10px
+	font-size: 14px
+	font-weight: 700
 
 .basket-total-true
 	color red
@@ -540,13 +557,26 @@ body
 	.cart-val
 		display: none
 
-
+	.cart-link
+		display block
 
 .incr
 	f()
 	height 40px
 	position relative
 	width 160px
+
+.incr--small
+	width: 80px
+	.incr__nav
+		size 26px
+		.icon
+			size 10px
+	.incr__val
+		width: 25px
+		font-size: 12px
+		font-weight: 700
+
 .incr__nav
 	flex(mid)
 	tr(background )
@@ -559,10 +589,9 @@ body
 		fill #b3b3b3
 	&:hover
 		cp()
-		background-color $mark
-		border 0
+		border-color $mark
 		.icon
-			fill black
+			fill $mark
 	&:active
 		background-color $mark-light
 .incr__val
@@ -611,13 +640,16 @@ body
 	margin-right: 20px
 
 .basket-empty
-	+below(768px)
-		margin-top: 40px
-	display: none
+	flex(mid)
+	fl()
+	padding: 20px
+.basket-empty-img
+	margin-bottom: 20px
 .basket-empty__title
 	text-align: center
-	@extend .type--xl
+	@extend .type--lg
 	margin-bottom: 10px
+	font-weight: 700
 .basket-empty__text
 	text-align: center
 
@@ -651,29 +683,17 @@ body
 	margin 0
 	z-index 999
 	animation:  slideInDown  1s 1 ease-in-out;
-	.header-info__icon
-		.icon
-			fill white
-	.header-info__phone
-		color white
 	.header-info__callback
-		color white
-	.header-info__text
 		color white
 	.header-main__logo
 		+below(768px)
 			width: 40px
 		width: 70px
 	.header-menu-wrap
-		+below(1024px)
-			display: none
 		background: white
 		.logo
 			display: block
 	.header-top-wrap
-		+below(1024px)
-			display: block
-			border-bottom 1px solid $snow
 		display: none
 	.header-nav--add
 		display: none
@@ -740,15 +760,15 @@ body
 	+above(1025px)
 		display: none !important
 	+below(786px)
-		height: calc(100% - 55px) //Отступ хедер
+		height: calc(100% - 55px)
 		top 55px
 	+below(480px)
 		width: 100%
 	background: $dark
 	position: fixed
-	height: calc(100% - 70px) //Отступ хедер
+	height: calc(100% - 60px) //Отступ хедер
 	z-index 1250
-	top 70px
+	top 60px
 	left 0
 	width: 320px
 	transform translateX(-110%)
@@ -805,17 +825,21 @@ body
 	position: relative
 	f()
 	fl()
-	//cp()
+	animation-duration: .8s
+	animation-fill-mode: both
+	animation-timing-function: ease-in-out
+	animation-iteration-count: 1
+	transform: translateZ(20px)
 
 .product-label
 	+below(480px)
-		padding: 10px 10px
-		font-size: 8px
+		padding: 10px 15px
+		font-size: 12px
 	flex(mid)
 	tr(all)
 	cp()
 	padding: 5px 10px
-	br(5px)
+	br(20px)
 	display: inline-block
 	color white
 	font-size: 14px
@@ -886,11 +910,17 @@ body
 	display: block
 
 .product__text
+	+below(1024px)
+		opacity:1!important
+		left initial!important
+		height: auto !important
+		transform translateY(0)!important
+		margin: 15px 0!important
 	margin: 0 auto
 	opacity .8
 	margin-bottom: auto
 	line-height: 1.6
-
+	tr()
 .product-cont
 	+below(1024px)
 		grid-template-columns: repeat(3, 1fr)
@@ -1138,7 +1168,7 @@ body
 	display: grid
 	grid-gap 10px
 	grid-template-columns: repeat(auto-fit, minmax(3rem,1fr))
-	margin-top: 20px
+	margin-top: 5px
 .size__el
 	+below(480px)
 		font-weight:700
@@ -1169,7 +1199,6 @@ body
 	border-bottom 1px solid $gray
 	@extend .type--sm
 	cp()
-	margin-bottom: 20px
 .duff__el--active
 	border-bottom 2px solid $mark
 
@@ -1495,7 +1524,7 @@ body
 // ===== FOOTER ====  === end
 
 .fix-soc
-	+below(1024px)
+	+below(1280px)
 		display: none
 	position: fixed
 	left 10px
@@ -1602,10 +1631,7 @@ body
 			margin-bottom: 40px
 
 
-.title
-	@extend .type--lg
-	margin-bottom: 40px
-	font-weight: 700
+
 
 .content
 	+below(768px)
@@ -1659,10 +1685,12 @@ body
 		font-size: 16px
 	.duff__el
 		+below(768px)
-			font-size: 12px
+			font-size: 14px
 		font-weight:700
 		font-size: 16px
-
+	.item-ingr
+		margin-top: 30px
+		display: block!important
 .card__title
 	+below(768px)
 		text-align: center
@@ -1674,18 +1702,20 @@ body
 	@extend .type--xl
 	f()
 	font-weight: 700
+	margin-bottom: 20px
+	line-height: 1
 	.icon
 		+below(768px)
 			display: none
 		&:hover
-			fill $mark
+			fill black
+		fill $mark
 		tr()
 		display block
 		size 50px
-		opacity .6
 		margin-right: 30px
 		margin-left: -80px
-
+		margin-top: -5px
 .card-type
 	+below(768px)
 		margin-bottom: 20px
@@ -1751,18 +1781,12 @@ body
 // ==== ITEM ==== === end
 
 .title-row
-	+below(768px)
-		padding: 15px 0
-		margin-bottom: 30px
-		line-height: 1
-		font-size: 24px
-	@extend .type--xl
-	text-align: center
-	padding: 30px 0
 	position: relative
 	font-weight: 700
-	border-bottom:1px solid #dedede
 	margin-bottom: 50px
+	f()
+	fw()
+	align-items center
 	.icon
 		+below(768px)
 			size 25px
@@ -1770,11 +1794,40 @@ body
 			display: none
 		tr(all)
 		size 50px
-		opacity .2
-		left: 0
-		position: absolute
+		fill $mark
 		&:hover
-			opacity 1
+			fill black
+	.title
+		margin-bottom: 0
+		margin-right: 20px
+		margin-top: -5px
+.title
+	@extend .type--xl
+	margin-bottom: 40px
+	font-weight: 700
+	position relative
+	line-height: 1
+.title-val
+	position absolute
+	font-size: 14px
+	color $gray
+	top -5px
+	right: -5px
+
+.title__more
+	+below(767px)
+		margin-left: 0
+	font-size: 12px
+	link($gray)
+	cp()
+	font-weight: 400
+	margin-left: 20px
+	display: inline
+	align-self flex-end
+
+.title-back
+	display block
+	margin-right: 5%
 
 // ==== ORDER ====
 .order
@@ -1785,6 +1838,12 @@ body
 	align-items streth
 
 .order-cont
+	+below(960px)
+		fw()
+	f()
+	justify-content space-between
+	align-items: flex-start
+	margin-bottom: 50px
 	width: 100%
 
 
@@ -1807,9 +1866,10 @@ body
 	background: white
 	z-index 10!important
 .order-item
-	+below(768px)
+	+below(960px)
 		margin-bottom: 20px
-	margin-bottom: 40px
+		width: 100%
+	width: 65%
 	.basket__el-info
 		+below(768px)
 			width: 100%
@@ -1920,34 +1980,33 @@ body
 	width: 100%
 
 .total
-	+below(640px)
-		fl()
-		padding: 40px 0
-		margin-bottom: 30px
-	margin-bottom 60px
-	background: black
-	flex(mid)
+	+below(960px)
+		width: 100%
+	border-radius 20px
+	background-color #f5f5f5
+	width: calc(30% - 20px)
+	margin-left auto
+	padding: 20px 25px
+.total-row
+	flex(between)
+	margin-bottom: 20px
+.total-row__type
+	font-weight: 700
+	font-size: 18px
+.total-row__val
+	font-weight: 700
+	font-size: 24px
+	white-space nowrap
 .total-text
-	color #ffffff
 	@extend .type--md
-	font-weight 700
-	letter-spacing 0.18px
-.total-val
-	+below(640px)
-		margin: 20px 0
-		font-size: 36px
-	color #ffffff
-	@extend .type--xl
-	font-weight 700
-	letter-spacing 0.32px
-	margin: 0 30px
-	font-weight 700
+	margin-bottom: 10px
+	line-height: 1.6
+	font-size: 14px
 .total-get
-	color black
 	@extend .btn--md
 	@extend .btn--mark
 	padding: 20px 50px
-	br(0)
+	width: 100%
 // ==== ORDER ==== === end
 
 // ==== form ====
@@ -3009,25 +3068,7 @@ select.select-beauty
 // ==== SALE ==== === end
 
 // REVIEW
-.title-row
-	+below(1024px)
-		fw()
-		fl()
-		align-items center
-	+below(768px)
-		margin-top: 20px
-		margin-bottom: 20px
-	f()
-	align-items: center
-	margin-bottom: 40px
-	.section-title
-		margin-bottom: 0
-		margin-right: 40px
-	.promo-wrap
-		+below(768px)
-			width: 100%
-			margin-top: 20px
-			justify-content: flex-start
+
 .title-row--mid
 	+below(1024px)
 		flex(mid)
@@ -3379,3 +3420,289 @@ select.select-beauty
 	&:last-child
 		margin-bottom: 0
 // ==== LOCATION ==== === end
+
+.nav
+	+below(1024px)
+		display none
+	position relative
+.nav-toggle
+	f()
+	align-items center
+	justify-content center
+	padding: 10px 20px
+	background: $mark
+	br(10px)
+	.icon
+		size 24px
+		fill white
+		margin-right: 20px
+	span
+		color white
+		font-size: 18px
+
+.nav-wrap
+	position absolute
+	top 100%
+	left 0
+	z-index 10
+	border 1px solid $border-color
+	overflow-x: visible
+	background: white
+.nav-el
+	&:hover
+		.nav-sub
+			display block
+	.icon
+		size 10px
+		fill $gray
+		flex(mid)
+.ps-container > .ps-scrollbar-x-rail,.ps-container > .ps-scrollbar-y-rail
+	opacity: 0.6!important
+.nav-box
+	padding: 20px 0
+	max-height: 400px
+	overflow-y scroll
+.nav-el__cont
+	f()
+	justify-content space-between
+	align-items center
+	padding: 10px 30px
+	cp()
+	tr()
+	background: white
+	width: 300px
+	&:hover
+		color white
+		background: $mark
+	& > span
+		font-weight: 700
+		white-space nowrap
+		text-overflow ellipsis
+		overflow hidden
+		display block
+
+.nav-sub
+	position absolute
+	left 300px
+	top 0
+	background: white
+	display none
+	padding: 10px 0
+	border 1px solid $border-color
+	width: 300px
+	height 400px
+
+
+
+.nav-sub__el
+	padding: 10px 30px
+	color black!important
+	display block
+	&:hover
+		background: $mark
+		color white!important
+.basket-add__el
+	br(10px)
+	margin-left: 10px
+	width: 225px
+	height: 125px
+	border 1px solid $border-color
+	padding: 15px
+	&:last-child
+		margin-right: 0
+
+.basket-add
+	position relative
+	margin-top: 20px
+	&:before
+		content ''
+		position absolute
+		width: 30px
+		height: 100%
+		bottom 0
+		right 0
+		background-image linear-gradient(to right, rgba(255, 255, 255, 0) 0%, #ffffff 100%)
+		z-index 10
+	.slick-prev[aria-disabled="true"]
+		display none!important
+	.slick-arrow
+		fill #626466
+		size 16px
+	.slick-prev
+		left 10px
+		z-index 10
+	.slick-next
+		right 10px
+		z-index 10
+.basket-add-info
+	f()
+	height: 100%
+.basket-add__img
+	size 70px
+	bg-full()
+	margin-right: 10px
+.basket-add-cont
+	width calc(100% - 80px)
+	f()
+	fl()
+.basket-add-title
+	font-size: 12px
+	font-weight: 700
+	color black
+	margin-bottom: 10px
+.basket-add-cost
+	font-size: 12px
+	font-weight: 700
+	margin-bottom: 5px
+.basket-add-get
+	margin-top: auto
+	@extend .btn--light
+	@extend .btn--sm
+	color $mark
+	width: 85px
+
+.slider-control
+	size 14px
+
+.item-ingr
+	+below(1024px)
+		display: none !important
+	margin-bottom: 10px
+	transition all .8s
+.item-ingr--dark
+	background: #F5F5F5
+	padding: 20px
+	br(10px)
+
+.item-ingr__text
+	margin-bottom: 10px
+.item-ingr__cont
+	flex(between)
+.item-ingr__el
+	flex(mid)
+	fl()
+.item-ingr__el-val
+	font-size: 16px
+	font-weight:700
+	margin-bottom: 5px
+
+.product-box
+	+below(1024px)
+		height: auto !important
+	height: 90px
+
+.product-el--add
+	size 30px
+	round()
+	flex(mid)
+	position absolute
+	top: 0
+	right: 0
+	background: #373A48
+	z-index 10
+	.icon
+		fill white
+		size 16px
+
+.product-sale
+	bg-full()
+	padding: 20% 10%
+	br(10px)
+	overflow hidden
+
+//
+
+.order__el-info
+	+below(768px)
+		fl()
+		justify-content center
+		align-items center
+	f()
+	align-items: flex-start
+
+.order__el
+	+below(768px)
+			fw()
+			flex(mid)
+			fl()
+			position: relative
+	display flex!important
+	flex(between)
+	padding: 10px 0
+	outline none!important
+
+.order__img
+	+below(768px)
+			margin-right: 0
+			height: 100px
+			width: 100px
+	size 70px
+	br(5px)
+	bg-full()
+	background-size: contain
+	margin-right: 20px
+
+/*.order__name
+	font-weight: 700
+	font-size: 14px
+	margin-bottom: 5px
+	display block*/
+
+.order__name-text
+	+below(768px)
+			font-size: 20px
+			margin-bottom: 20px
+			text-align: center
+	@extend .type--lg
+	tr()
+	margin-bottom: 5px
+	font-weight 700
+	color $dark
+	display block
+	&:hover
+			color $mark
+.order__adds
+	+below(768px)
+		width: 100%
+		text-align center
+.order__adds-el
+	+below(768px)
+			margin-bottom: 10px
+			text-align: center
+
+	cp()
+	margin-top: 5px
+	display: inline-block
+	margin-right: 5px
+
+//.order__inc
+.order__price
+	+below(768px)
+		margin: 20px 0
+		font-size: 20px
+		margin-right:initial
+		text-align center
+	font-weight 700
+	@extend .type--lg
+	white-space nowrap
+	margin-right: auto
+.order__delete
+	+below(768px)
+		position absolute
+		top 0
+		right: 0
+	margin-left: auto
+	.icon
+		cp()
+		tr(all)
+		size 16px
+		fill black
+		&:hover
+				fill $mark
+.order__el-change
+	+below(768px)
+		width: 100%
+		fl()
+	f()
+	align-items center
+	width: 50%

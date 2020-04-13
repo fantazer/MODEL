@@ -6,40 +6,44 @@ include block_html/_include.pug
 .content
 	.main-cont
 			.title-row
-				.title-row-back
+				a(href="#").title-back
 					+icon("round-arrow-left","icon")
-				span Ваш заказ
+				.title Корзина
 			.order
 				.order-cont
 					.order-item
 						- for (var i=0;i<3;i++)
-							.basket__el
-								.basket__el-info
-									a(href="#" style="background-image:url('img/item-pizza-1.png')" ).basket__img
-									.basket__name
-										a(href="#").basket__name-text Малибу
-										.basket__adds
-											.basket__adds-el <b>2x</b> соус тар-тар
-											.basket__adds-el <b>2x</b> соус тар-тар
-								.basket__el-change
-									.basket__inc
+							.order__el
+								.order__el-info
+									a(href="#" style="background-image:url('img/item-pizza-1.png')" ).order__img
+									.order__name
+										a(href="#").order__name-text Малибу
+										.order__adds средняя 30 см, традиционное тесто
+
+								.order__el-change
+									.order__price 120 р.
+									.order__inc
 										+incr()
-									.basket__price 120 р.
-									.basket__delete
+									.order__delete
 										+icon("garbage","icon")
 					.total
-						.total-text Сумма заказа
-						.total-val 3 895 ₽
+						.total-row
+							.total-row__type + доставка
+							.total-row__val 500 ₽
+						.total-text бесплатная доставка от 900₽ добавьте в корзину что-то вкусненькое
+						.total-row
+							.total-row__type Сумма заказа
+							.total-row__val 3 895 ₽
 						.total-get Оформить заказ
-					.title Рекомендуем попробовать
-					.order-add
-						- for (var i=0;i< 4;i++)
-							+product()
+			.title Рекомендуем попробовать
+			.order-add
+				- for (var i=0;i< 4;i++)
+					+product()
 
-					.title Добавьте соус
-					.order-add
-						- for (var i=0;i< 4;i++)
-							+product()
+			.title Добавьте соус
+			.order-add
+				- for (var i=0;i< 4;i++)
+					+product()
 
 
 

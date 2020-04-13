@@ -26,77 +26,22 @@ include block_html/_include.pug
 				.consist__el-text Польза в каждом кусочке
 
 	//promo
-	.promo-wrap
+	//.promo-wrap
 		.promo
 			input(type="text" placeholder="Ваш промокод").promo-input
 			.btn--md.btn--mark.promo-get Применить
 
 	//product-cont
 	.main-cont
+		.title-row
+			.title Пицца
+				.title-val 15
+			a(href="#").title__more Смотреть все товары
 		.product-cont
-			- for (var i=0;i< 3;i++)
-				.product-el
-					.product-label пицца дня
-					a(href="#").product__img
-						.product__img-el(style="background-image:url('img/item-pizza-1.png')")
-					.product__cont
-						a(href="#").product__title Рокки Роутс
-						.product__text Сыр, пицца-соус, ананас, сыр, перец болгарский, куриное филе, пицца-соус, ананас
-							span.product__add.tooltip
-									+icon("plus","icon")
-									.top
-										i
-										| добавить ингредиенты
-						.size
-							.size__el.size__el--active 25 см
-							.size__el 30 см
-							.size__el 35 см
-						.duff
-							.duff__el.duff__el--active Традиционное
-							.duff__el Тонкое
-						.product-footer
-							.product-price 860 р.
-							.product-add.toggle-cart-animate В корзину
-							.product-incr
-								+incr()
-				.product-el
-					.product-label.product-label--red хит продаж
-					a(href="#").product__img
-						.product__img-el(style="background-image:url('img/item-pizza-1.png')")
-					.product__cont
-						a(href="#").product__title Рокки Роутс
-						.product__text Сыр, пицца-соус, ананас, сыр, перец болгарский, куриное филе, пицца-соус, ананас
-						.size
-							.size__el.size__el--active 25 см
-							.size__el 30 см
-							.size__el 35 см
-						.duff
-							.duff__el.duff__el--active Традиционное
-							.duff__el Тонкое
-						.product-footer
-							.product-price 860 р.
-							.product-add.toggle-cart-animate В корзину
-							.product-incr
-								+incr()
-				.product-el
-					.product-label.product-label--black специальная цена
-					a(href="#").product__img
-						.product__img-el(style="background-image:url('img/item-pizza-1.png')")
-					.product__cont
-						a(href="#").product__title Рокки Роутс
-						.product__text Сыр, пицца-соус, ананас, сыр, перец болгарский, куриное филе, пицца-соус, ананас
-						.size
-							.size__el.size__el--active 25 см
-							.size__el 30 см
-							.size__el 35 см
-						.duff
-							.duff__el.duff__el--active Традиционное
-							.duff__el Тонкое
-						.product-footer
-							.product-price 860 р.
-							.product-add.toggle-cart-animate В корзину
-							.product-incr
-								+incr()
+			- for (var i=0;i< 9;i++)
+				+product()
+			a(href="#" style="background-image:url('img/sale-banner.jpg')").product-sale
+
 	//category
 	.main-cont
 		.category

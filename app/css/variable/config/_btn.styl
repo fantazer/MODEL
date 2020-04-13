@@ -1,7 +1,7 @@
 // ============================ Buttons ============================
 .btn
 	tr(all)
-	br(3px)
+	br(5px)
 	display inline-block
 	background none
 	border 0px
@@ -14,15 +14,14 @@
 .btn--sm
 	@extend .btn
 	font-size 10px
-	padding 5px 10px
+	padding 5px 5px
 	.nav-icon
 		size 10px
 
 .btn--md
 	@extend .btn
-	@extend .type--main
 	padding 12px 50px
-
+	font-size: 14px
 
 .btn--lg
 	@extend .btn
@@ -58,11 +57,12 @@
 
 .btn--light
 	@extend .btn
-	color black
+	color $mark
 	border 1px solid $mark
 	background-color #ffffff
 	&:hover
 		background-color $mark
+		color white
 	&:active
 		background-color $mark
 		border 1px solid $mark
