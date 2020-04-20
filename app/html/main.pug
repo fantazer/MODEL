@@ -5,8 +5,9 @@ include block_html/_include.pug
 
 .main-slider
 	- for (var i=0;i<4;i++)
-		a(href="#").main-slider__el-wrap
-			.main-slider__el(style="background-image:url('img/banner-1.jpg')")
+		.main-slider__el-wrap
+			a(href="#" style="background-image:url('img/banner-1.jpg')").main-slider__el.main-slider__el--lg
+			a(href="#" style="background-image:url('img/banner-sm.jpg')").main-slider__el.main-slider__el--sm
 
 .content
 	.main-cont
@@ -25,6 +26,13 @@ include block_html/_include.pug
 					+icon("knife","icon")
 				.consist__el-text Польза в каждом кусочке
 
+		.kind
+			//add class .kind__el--active for active elements
+			- for (var i=0;i<3;i++)
+				-
+					var items = ['Готовая продукция','Готовая продукция КЦ','Кексы','Восточные и мучные сладости','Десерты','Кексы','Печенье','Киши и заливные'];
+				each item in items
+					.kind__el #{item}
 	//promo
 	//.promo-wrap
 		.promo

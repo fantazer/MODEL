@@ -1,4 +1,4 @@
-mixin header()
+mixin header(size)
 	//block header
 	.header(class=attributes.page)
 		//header-top
@@ -27,27 +27,37 @@ mixin header()
 
 		.header-menu-wrap
 			.main-cont
-
 				.header-menu
 					.head-toggle
 						+icon("menu","icon icon-open")
 						+icon("close","icon icon-close")
 					a(href="/").logo
-						img(src="img/logo.svg", alt="")
+						img(src="img/logo.svg", alt="" class="logo--dark")
+						//use img(src="img/logo-white.svg", alt="" class="logo--light") full size banner
+						img(src="img/logo-light.svg", alt="" class="logo--light")
+
 					.nav
 						.nav-toggle
-							+icon("cap","icon")
+							+icon("cap","icon icon-open")
+							+icon("close-fat","icon icon-close")
 							span Меню
-						//.nav-wrap
-							.nav-box.nice-scroll
-								- for (var i=0;i<20;i++)
-									.nav-el
-										.nav-el__cont
-											span Кондитерские изделия #{i+1}
-											+icon("arrow-right","icon")
-										.nav-sub.scroll
-												- for (var j=0;j<20;j++)
-													a(href="#").nav-sub__el Варенье/джемы/сиропы #{i+1+'/'+ j}
+						.nav-wrap.nav-wrap--sub
+							.nav-container
+								.nav-list
+									- for (var i=0;i<2;i++)
+										-
+											var items = ['Готовая продукция КЦ','Кексы','Восточные и мучные сладости','Десерты','Кексы','Печенье','Киши и заливные'];
+										each item,j in items
+											.nav-cat #{item}
+												.nav-wrap-item
+													.nav-item-head
+														+icon("arrow-left","icon")
+														span #{item}
+													.nav-item-cont
+														- for (var k=0;k<2;k++)
+															each item in items
+																.nav-item
+																	a(href="#") #{item} / #{j+1}
 					.header-contact
 						.header-info
 							.header-info__icon
@@ -81,7 +91,7 @@ mixin header()
 									.basket-empty__title Корзина пуста :(
 									.basket-empty__text Бесплатная доставка от 500 ₽, доставляем за 60 минут
 								.basket-list
-									.basket-container.nice-scroll
+									.basket-container.scroll
 										- for (var i=0;i<8;i++)
 											.basket__el
 												.basket__el-info
@@ -121,6 +131,23 @@ mixin header()
 
 
 		.slide-menu
+			.slide-nav
+				-
+					var items = ['Готовая продукция КЦ', 'Кексы', 'Восточные сладости', 'Десерты', 'Кексы', 'Печенье', 'Киши и заливные'];
+
+				each item in items
+					.slide-nav__el
+						.slide-nav__el-wrap
+							span #{item}
+							+icon("arrow-up","icon")
+						.slide-nav-sub
+							- for (var i=0;i<6;i++)
+								.slide-nav-sub__el #{item} / #{i}
+			.slide-row
+				.slide-menu__list
+					a(href="#").slide-menu__list-el Акции
+					a(href="#").slide-menu__list-el Доставка
+					a(href="#").slide-menu__list-el О нас
 			.slide-row
 				.slide-header-auth
 					// toggle .slide-header-auth--true
@@ -131,11 +158,6 @@ mixin header()
 						span Александр
 						.slide-header-auth__bonus
 							span 356 Б
-			.slide-row
-				.slide-menu__list
-					a(href="#").slide-menu__list-el Акции
-					a(href="#").slide-menu__list-el Доставка
-					a(href="#").slide-menu__list-el О нас
 			.slide-row
 				.slide-header-location
 					.slide-header-info

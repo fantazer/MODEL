@@ -5,45 +5,45 @@ include block_html/_include.pug
 +header()
 .content
 	.main-cont
-			.title-row
-				a(href="#").title-back
-					+icon("round-arrow-left","icon")
-				.title Корзина
-			.order
-				.order-cont
-					.order-item
-						- for (var i=0;i<3;i++)
-							.order__el
-								.order__el-info
-									a(href="#" style="background-image:url('img/item-pizza-1.png')" ).order__img
-									.order__name
-										a(href="#").order__name-text Малибу
-										.order__adds средняя 30 см, традиционное тесто
+		.title-row
+			a(href="#").title-back
+				+icon("round-arrow-left","icon")
+			.title Корзина
+		.order
+			.order-cont
+				.order-item
+					- for (var i=0;i<3;i++)
+						.order__el
+							.order__el-info
+								a(href="#" style="background-image:url('img/item-pizza-1.png')" ).order__img
+								.order__name
+									a(href="#").order__name-text Малибу
+									.order__adds средняя 30 см, традиционное тесто
 
-								.order__el-change
-									.order__price 120 р.
-									.order__inc
-										+incr()
-									.order__delete
-										+icon("garbage","icon")
-					.total
-						.total-row
-							.total-row__type + доставка
-							.total-row__val 500 ₽
-						.total-text бесплатная доставка от 900₽ добавьте в корзину что-то вкусненькое
-						.total-row
-							.total-row__type Сумма заказа
-							.total-row__val 3 895 ₽
-						.total-get Оформить заказ
-			.title Рекомендуем попробовать
-			.order-add
-				- for (var i=0;i< 4;i++)
-					+product()
+							.order__el-change
+								.order__price 120 р.
+								.order__inc
+									+incr()
+								.order__delete
+									+icon("garbage","icon")
+				.total
+					.total-row
+						.total-row__type + доставка
+						.total-row__val 500 ₽
+					.total-text бесплатная доставка от 900₽ добавьте в корзину что-то вкусненькое
+					.total-row
+						.total-row__type Сумма заказа
+						.total-row__val 3 895 ₽
+					.total-get Оформить заказ
+		.title Рекомендуем попробовать
+		.order-add
+			- for (var i=0;i< 4;i++)
+				+product()
 
-			.title Добавьте соус
-			.order-add
-				- for (var i=0;i< 4;i++)
-					+product()
+		.title Добавьте соус
+		.order-add
+			- for (var i=0;i< 4;i++)
+				+product()
 
 
 

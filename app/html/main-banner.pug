@@ -1,0 +1,76 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
+.header--lg
+	+header()
+	.main-slider
+		- for (var i=0;i<4;i++)
+			.main-slider__el-wrap
+				a(href="#" style="background-image:url('img/banner-lg.jpg')").main-slider__el.main-slider__el--lg
+				a(href="#" style="background-image:url('img/banner-sm.jpg')").main-slider__el.main-slider__el--sm
+
+.content
+	.main-cont
+		//.consist
+		.consist
+			.consist__el
+				.consist__el-icon
+					+icon("veg","icon")
+				.consist__el-text Свежие натуральные ингредиенты
+			.consist__el
+				.consist__el-icon
+					+icon("pizza","icon")
+				.consist__el-text Нежное тесто из лучших сортов муки
+			.consist__el
+				.consist__el-icon
+					+icon("knife","icon")
+				.consist__el-text Польза в каждом кусочке
+
+	//promo
+	//.promo-wrap
+		.promo
+			input(type="text" placeholder="Ваш промокод").promo-input
+			.btn--md.btn--mark.promo-get Применить
+
+	//product-cont
+	.main-cont
+		.title-row
+			.title Пицца
+				.title-val 15
+			a(href="#").title__more Смотреть все товары
+		.product-cont
+			- for (var i=0;i< 9;i++)
+				+product()
+			a(href="#" style="background-image:url('img/sale-banner.jpg')").product-sale
+
+	//category
+	.main-cont
+		.category
+			a.category__el(style="background-image:url('img/sets.jpg')" href="#")
+				.category__el-title Сеты
+			a.category__el(style="background-image:url('img/sups.jpg')" href="#")
+				.category__el-title Супы
+			a.category__el(style="background-image:url('img/hot.jpg')" href="#")
+				.category__el-title Горячее
+			a.category__el(style="background-image:url('img/salad.jpg')" href="#")
+				.category__el-title Салаты
+			a.category__el(style="background-image:url('img/drinks.jpg')" href="#")
+				.category__el-title Напитки
+			a.category__el(style="background-image:url('img/deserts.jpg')" href="#")
+				.category__el-title Десерты
+
+//sale
+.sale-wrap
+	.main-cont
+		.sale
+			.sale-slider-wrap
+				.sale-slider
+					.sale-slider__el(style="background-image:url('img/sale.jpg')")
+					.sale-slider__el(style="background-image:url('img/sale.jpg')")
+					.sale-slider__el(style="background-image:url('img/sale.jpg')")
+			.sale-info
+				.sale-title АКЦИИ
+				.sale-text Постоянно проходящие акции в Trattoria сделают покупку еще более привлекательной и выгодной. Вы можете воспользоваться промокодом указанным в действующих акциях на сайте, нашем приложении или соцсетях
+
++footer()
+include ./block_html/_script.pug

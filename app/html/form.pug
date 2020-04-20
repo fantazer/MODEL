@@ -7,28 +7,32 @@ include block_html/_include.pug
 .content
 	.main-cont
 		.title-row
-			.title-row-back
+			a(href="#").title-back
 				+icon("round-arrow-left","icon")
-			span Оформление заказа
+			.title Оформление заказа
 		.order-form
-			.input-cont
-				.input-row
-					input(type="text"  data-input="Ваше имя").input-animate
-			.input-cont.input-cont--half
-				.input-row
-					input(type="text"  data-input="Телефон").input-animate
-				.input-row
-					input(type="text"  data-input="Email").input-animate
-			.radio-cont
-				+radio('Наличные курьеру')
-				+radio('Картой курьеру')
-				+radio('Онлайн')
-			//tab controll
-			.order-form__tab
-				.order-form__tab-el.order-form__tab-el--active(data-tab="deliver") Доставка
-				.order-form__tab-el(data-tab="self") Самовывоз
-			.order-form__border
-				.order-form__border-el
+			.form-cont
+				.input-cont
+					.input-row
+						input(type="text"  data-input="Ваше имя").input-animate
+				.input-cont.input-cont--half
+					.input-row
+						input(type="text"  data-input="Телефон").input-animate
+					.input-row
+						input(type="text"  data-input="Email").input-animate
+			.form-cont
+				.title--md Оплата:
+				.radio-cont
+					+radio('Наличные курьеру')
+					+radio('Картой курьеру')
+					+radio('Онлайн')
+			.form-cont
+				//tab controll
+				.order-form__tab
+					.order-form__tab-el.order-form__tab-el--active(data-tab="deliver") Доставка
+					.order-form__tab-el(data-tab="self") Самовывоз
+				.order-form__border
+					.order-form__border-el
 
 
 			//tab container
@@ -65,7 +69,7 @@ include block_html/_include.pug
 						option Третий ресторан
 						option Третий ресторан
 
-			.order-form-divider
+			.title--md Время доставки
 			.input-cont.input-cont--half
 				.input-row
 					select.select-beauty

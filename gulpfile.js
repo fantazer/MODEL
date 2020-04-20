@@ -119,7 +119,7 @@ gulp.task('screenshot', function() {
 										width: 1920,
 										height: 1024
 								},
-								userAgent: 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2228.0 Safari/537.36'
+								userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.92 Safari/537.36'
 						}
 				));
 })
@@ -384,13 +384,13 @@ gulp.task('build:ftp',function(){
 				'copy:css',
 				'min:css',
 				'min:js',
-				//'screenshot',
+				'screenshot',
 				'img',
 				//'svg',
-				'make',
+				'make'
 				//'zip',
 				//'guide',
-				'ftp'
+				//'ftp'
 				//'template'
 		)
 });

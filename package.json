@@ -42,5 +42,8 @@
     "run-sequence": "^1.1.5",
     "rupture": "^0.6.1",
     "vinyl-ftp": "^0.4.4"
+  },
+  "dependencies": {
+    "jquery.scrollbar": "^0.2.11"
   }
 }

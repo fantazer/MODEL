@@ -53,13 +53,7 @@ $(document).ready(function () {
 	});
 	// toggle lk-history === end
 
-	//custom scroll
- 	$(".nice-scroll").niceScroll({
-		autohidemode:"false",
-		touchbehavior:"true",
-		cursorcolor: "#d9dadb"
-	});
-	//custom scroll === end
+
 
 
 	// nice select
@@ -158,16 +152,21 @@ $(document).ready(function () {
 		$('.cart-wrap').removeClass('header-cart--open');
 		$('.basket-wrap').removeClass('bounce-show');
 		$('body').removeClass('modal-open');
+		$('.nav-wrap').slideUp();
+		$('.nav-toggle').removeClass("nav-toggle--active");
 	});
 	//toggle basket end
 
-
-	//remove item in basket
-
-	// function for valide number item in cart
-
-	//remove item in basket end
-
+	//toggle nav
+	$('.nav').click(function (event) {
+		$('.nav-wrap').slideToggle();
+		$('.nav-toggle').toggleClass("nav-toggle--active");
+		event.stopPropagation();
+	});
+	$('.nav-wrap').click(function(event){
+		event.stopPropagation();
+	});
+	//toggle basket end
 
 	//remove item in basket by decrement
 	var Incr;
@@ -463,9 +462,40 @@ $(' .modal-close , .hide-modal').click(function () {
 	});
 	// toggle review === end
 
-	// template scroll
-	$('.scroll').perfectScrollbar({
+// template scroll
+/*	$('.scroll').perfectScrollbar({
 		//wheelSpeed: 0.8,
+	});*/
+
+		//custom scroll
+/* 	$(".scroll1").niceScroll({
+		touchbehavior:"true",
+		cursorcolor: "#d9dadb",
+	});*/
+	//custom scroll === end
+
+	$(".scroll").mCustomScrollbar({
+		autoDraggerLength: false,
+		theme:"dark",
+		mouseWheel:{ preventDefault: true }
 	});
 	// template scroll === end
+
+
+	// navigation
+	$('.nav-cat').click(function(){
+		$(this).find(".nav-wrap-item").addClass("nav-wrap-item--active")
+	});
+	$('.nav-item-head').click(function(e){
+		$(this).closest(".nav-wrap-item").removeClass("nav-wrap-item--active");
+		e.stopPropagation();
+	});
+	// navigation === end
+
+	// toggle slide nav
+	$('.slide-nav__el-wrap').click(function(){
+		$(this).toggleClass("slide-nav__el-wrap--active");
+		$(this).closest('.slide-nav__el').find(".slide-nav-sub").slideToggle()
+	});
+	// toggle slide nav === end
 });
