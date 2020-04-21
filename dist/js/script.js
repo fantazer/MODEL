@@ -182,7 +182,7 @@ $(document).ready(function () {
 
 
 
-	var shrinkHeader = 450;
+	var shrinkHeader = 150;
 	$(window).scroll(function() {
 		var scroll = $(this).scrollTop();
 		if ( scroll >= shrinkHeader ) {

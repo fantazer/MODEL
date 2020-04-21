@@ -701,8 +701,8 @@ body
 // basket === end
 
 .main-slider
-	/*+below(760px)
-		display: none*/
+	+below(760px)
+		display: none
 	.slick-dots
 		+below(640px)
 			bottom 10px
@@ -3769,6 +3769,9 @@ select.select-beauty
 .header--lg
 	position relative
 	.header
+		+below(768px)
+			position relative
+			background: white
 		position absolute
 		top 0
 		left 0
@@ -3799,8 +3802,12 @@ select.select-beauty
 				content ''
 				display none
 	.cart-cost
+		+below(768px)
+			color black
 		color white
 	.cart-val
+		+below(768px)
+			color black
 		color white
 	.main-slider__el
 		+above(1921px)
@@ -3810,9 +3817,16 @@ select.select-beauty
 			height: auto
 	.head-toggle
 		.icon
+			+below(768px)
+				fill black
 			fill white
 	.logo--dark
+		+below(768px)
+			display block
 		display none
+	.logo--light
+		+below(768px)
+			display none!important
 	.shrink
 		bsh()
 		.header-auth
